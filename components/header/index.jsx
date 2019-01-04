@@ -20,6 +20,7 @@ import Link from '../link'
 import Logo from '../logo'
 
 import './header.scss'
+import SearchNavbar from '../search-navbar'
 
 class Header extends React.Component {
   state = {
@@ -38,6 +39,7 @@ class Header extends React.Component {
     if (level === 0) {
       return (
         <Nav className="ml-auto" navbar>
+          <SearchNavbar />
           {children.map(node => Header.renderMenu(node, level + 1))}
         </Nav>
       )
@@ -114,6 +116,7 @@ class Header extends React.Component {
           )}
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>
+            {/* <SearchNavbar /> */}
             {Header.renderMenu({ children: siteMap })}
           </Collapse>
         </Container>

@@ -1,0 +1,18 @@
+.animated-search {
+  width: 80px;
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+  }
+  &:hover {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+  }
+}
