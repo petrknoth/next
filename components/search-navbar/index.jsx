@@ -3,13 +3,7 @@ import { Form } from 'reactstrap'
 import './search-navbar.scss'
 
 const SearchNavbar = () => (
-  <Form inline className="">
-    {/* <InputGroup> */}
-    {/* <Input /> */}
-    {/* <InputGroupAddon addonType="append"> */}
-    {/* <Button color="primary">Search</Button> */}
-    {/* </InputGroupAddon> */}
-    {/* </InputGroup> */}
+  <Form inline className="d-md-none">
     <input
       className="animated-search"
       type="text"

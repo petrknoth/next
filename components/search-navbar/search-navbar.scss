@@ -8,17 +8,20 @@
   &::placeholder {
     //color: #2a3840;
     color: $navbar-light-color;
+    text-align: center;
   }
 
   &:focus {
     width: 100%;
-    border: 2px solid $gray-500;
+    //border: 2px solid $gray-500;
     border-radius: 4px;
     background-color: $white;
+    outline: none;
   }
   &:hover {
     width: 100%;
-    border: 2px solid $gray-500;
+    //border: 2px solid $gray-500;
+    border-bottom: 2px solid $primary;
     border-radius: 4px;
     background-color: $white;
   }
