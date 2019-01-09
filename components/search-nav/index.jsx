@@ -5,7 +5,7 @@ import './search-nav.scss'
 const SearchNav = () => (
   <Form
     inline
-    className="search-field d-sm-none d-md-block pr-lg-5 mr-lg-5 mr-sm-3"
+    className="search-field d-none d-md-block pr-lg-5 mr-lg-5 mr-sm-3"
   >
     <InputGroup>
       <Input />

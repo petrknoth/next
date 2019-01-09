@@ -1,28 +1,37 @@
 @import "../bootstrap/core";
 
 .animated-search {
-  width: 80px;
+  flex: 1 1 auto;
+}
+
+.animated-search + .navbar-toggler {
+  margin-left: $spacer;
+}
+
+.animated-search input {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
   border: 2px solid transparent;
-  background-color: transparent;
+  background: transparent;
+  transition: $transition-base;
+
+  &:hover,
+  &:focus,
+  &:valid {
+    border-radius: $input-border-radius;
+    //background-color: $white;
+    outline: none;
+    border-bottom: 2px solid $primary;
+  }
+
+  &:focus,
+  &:valid {
+    width: 100%;
+  }
 
   &::placeholder {
-    //color: #2a3840;
     color: $navbar-light-color;
     text-align: center;
-  }
-
-  &:focus {
-    width: 100%;
-    //border: 2px solid $gray-500;
-    border-radius: 4px;
-    background-color: $white;
-    outline: none;
-  }
-  &:hover {
-    width: 100%;
-    //border: 2px solid $gray-500;
-    border-bottom: 2px solid $primary;
-    border-radius: 4px;
-    background-color: $white;
   }
 }

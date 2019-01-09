@@ -3,12 +3,13 @@ import { Form } from 'reactstrap'
 import './search-navbar.scss'
 
 const SearchNavbar = () => (
-  <Form inline className="d-md-none">
+  <Form inline className="animated-search d-md-none">
     <input
-      className="animated-search"
+      className=""
       type="text"
       name="search"
       placeholder="&#128269; Search"
+      required
     />
   </Form>
 )
