@@ -21,7 +21,6 @@ import Logo from '../logo'
 
 import './header.scss'
 import SearchNavbar from '../search-navbar'
-import SearchNav from '../search-nav'
 
 class Header extends React.Component {
   state = {
@@ -41,7 +40,6 @@ class Header extends React.Component {
       return (
         <Nav className="ml-auto" navbar>
           {/* Search Navbar component v.1 - Hidden only on sm */}
-          <SearchNav />
           {children.map(node => Header.renderMenu(node, level + 1))}
         </Nav>
       )

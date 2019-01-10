@@ -1,5 +1,12 @@
 @import "../bootstrap/core";
 
+.search-field {
+  //width: 460px;
+  //margin-left: 100%;
+  width: auto;
+  min-width: 400px;
+}
+
 .animated-search {
   flex: 1 1 auto;
 }
@@ -19,7 +26,8 @@
   &:hover,
   &:focus,
   &:valid {
-    border-radius: $input-border-radius;
+    border-radius: 0;
+    //border-radius: $input-border-radius;
     //background-color: $white;
     outline: none;
     border-bottom: 2px solid $primary;
