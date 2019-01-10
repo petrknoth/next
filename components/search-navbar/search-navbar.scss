@@ -2,9 +2,14 @@
 
 .search-field {
   //width: 460px;
-  //margin-left: 100%;
   width: auto;
   min-width: 400px;
+}
+
+@media (min-width: 992px) {
+  .ml-lg-15 {
+    margin-left: 15rem !important;
+  }
 }
 
 .animated-search {

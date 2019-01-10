@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Form, InputGroup, Input, InputGroupAddon, Button } from 'reactstrap'
 import './search-navbar.scss'
 
 const SearchNavbar = () => (
-  <div>
+  <Fragment>
     <Form inline className="animated-search d-md-none">
       <input
         className=""
@@ -14,7 +14,7 @@ const SearchNavbar = () => (
       />
     </Form>
 
-    <Form inline className="search-field d-none d-md-block ml-lg-5 ml-md-3">
+    <Form inline className="search-field d-none d-md-block ml-lg-15 ml-md-4">
       <InputGroup>
         <Input />
         <InputGroupAddon addonType="append">
@@ -22,7 +22,7 @@ const SearchNavbar = () => (
         </InputGroupAddon>
       </InputGroup>
     </Form>
-  </div>
+  </Fragment>
 )
 
 export default SearchNavbar
