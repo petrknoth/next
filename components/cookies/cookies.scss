@@ -14,17 +14,21 @@
   transition: height 0.5s;
   z-index: 99;
 
-  background-color: $gray-200;
+  background: $beige-dark;
 }
 
 .cookies-close {
   display: none;
 }
 
-.cookies button {
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-  }
+//.cookies button {
+//  &:hover,
+//  &:active,
+//  &:focus {
+//    text-decoration: none;
+//  }
+//}
+
+.switch-block {
+  background-color: $gray-200;
 }
