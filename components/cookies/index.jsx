@@ -7,6 +7,7 @@ import {
   CustomInput,
   Form,
   FormGroup,
+  UncontrolledCollapse,
 } from 'reactstrap'
 import './cookies.scss'
 import { bind } from 'decko'
@@ -49,7 +50,7 @@ class CookiesHandler extends React.Component {
                         <em>Essential cookies</em>
                       </strong>
                       <br />
-                      <em>&nbsp;</em>
+                      &nbsp;
                     </p>
                     <Form>
                       <FormGroup>
@@ -63,10 +64,20 @@ class CookiesHandler extends React.Component {
                         </div>
                       </FormGroup>
                     </Form>
-                    <p className="text-justify">
-                      <strong>Required</strong> to make the site work, and to
-                      save the options you make here
-                    </p>
+                    <Button
+                      className="no-text-decoration mb-1"
+                      color="link"
+                      type="button"
+                      id="toggler1"
+                    >
+                      &#9654; &nbsp; What are these?
+                    </Button>
+                    <UncontrolledCollapse toggler="#toggler1">
+                      <p>
+                        <strong>Required</strong> to make the site work, and to
+                        save the options you make here
+                      </p>
+                    </UncontrolledCollapse>
                   </Col>
                   <Col xs="12" sm="4" className="text-center">
                     <p className="h6">
@@ -88,10 +99,20 @@ class CookiesHandler extends React.Component {
                         </div>
                       </FormGroup>
                     </Form>
-                    <p className="text-justify">
-                      Let the site remember certain choices you make, to make
-                      tasks easier.
-                    </p>
+                    <Button
+                      className="no-text-decoration mb-1"
+                      color="link"
+                      type="button"
+                      id="toggler2"
+                    >
+                      &#9654; &nbsp; What are these?
+                    </Button>
+                    <UncontrolledCollapse toggler="#toggler2">
+                      <p>
+                        Let the site remember certain choices you make, to make
+                        tasks easier.
+                      </p>
+                    </UncontrolledCollapse>
                   </Col>
                   <Col xs="12" sm="4" className="text-center">
                     <p className="h6">
@@ -112,21 +133,39 @@ class CookiesHandler extends React.Component {
                         </div>
                       </FormGroup>
                     </Form>
-                    <p className="text-justify">
-                      Help us measure site performance and make improvements.
-                    </p>
+                    <Button
+                      className="no-text-decoration mb-1"
+                      color="link"
+                      type="button"
+                      id="toggler3"
+                    >
+                      &#9654; &nbsp; What are these?
+                    </Button>
+                    <UncontrolledCollapse toggler="#toggler3">
+                      <p>
+                        Help us measure site performance and make improvements.
+                      </p>
+                    </UncontrolledCollapse>
                   </Col>
                 </Row>
               </div>
-              <div className="py-3">
+              <div>
                 <Row>
                   <Col xs="12" sm="4" className="text-center" />
                   <Col xs="12" sm="4" className="text-center">
-                    <Button color="primary" type="button" className="btn-block">
+                    <Button
+                      color="primary"
+                      type="button"
+                      className="btn-block mt-3"
+                    >
                       Save
                     </Button>
                   </Col>
-                  <Col xs="12" sm="4" className="text-right">
+                  <Col
+                    xs="12"
+                    sm="4"
+                    className="text-sm-right text-center my-3"
+                  >
                     <Button color="link" type="button">
                       Read more about how we use cookies
                     </Button>

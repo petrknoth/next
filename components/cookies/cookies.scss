@@ -21,13 +21,13 @@
   display: none;
 }
 
-//.cookies button {
-//  &:hover,
-//  &:active,
-//  &:focus {
-//    text-decoration: none;
-//  }
-//}
+.no-text-decoration {
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+}
 
 .switch-block {
   background-color: $gray-200;
