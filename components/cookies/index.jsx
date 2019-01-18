@@ -60,6 +60,7 @@ class CookiesHandler extends React.Component {
                             id="exampleCustomCheckbox3"
                             label=""
                             checked
+                            disabled
                           />
                         </div>
                       </FormGroup>
@@ -82,7 +83,7 @@ class CookiesHandler extends React.Component {
                   <Col xs="12" sm="4" className="text-center">
                     <p className="h6">
                       <strong>
-                        <em>Enchanced cookies</em>
+                        <em>Enhanced cookies</em>
                       </strong>
                       <br />
                       <em>(we never see this data)</em>
