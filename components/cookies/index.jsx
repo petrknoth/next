@@ -118,6 +118,21 @@ class CookiesHandler extends React.Component {
                   </Col>
                 </Row>
               </div>
+              <div className="py-3">
+                <Row>
+                  <Col xs="12" sm="4" className="text-center" />
+                  <Col xs="12" sm="4" className="text-center">
+                    <Button color="primary" type="button" className="btn-block">
+                      Save
+                    </Button>
+                  </Col>
+                  <Col xs="12" sm="4" className="text-right">
+                    <Button color="link" type="button">
+                      Read more about how we use cookies
+                    </Button>
+                  </Col>
+                </Row>
+              </div>
             </div>
           </Container>
         )}
