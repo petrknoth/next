@@ -139,3 +139,21 @@ $navbar-light-active-color:         $primary-dark; // $link-hover-color;
 // Sections
 
 $section-skew-width:                2 * $spacer;
+// $custom-control-indicator-bg-size:      50% 50% !default;
+$custom-control-indicator-box-shadow:   0 0 0 .2rem rgba($green, .25);
+// $custom-control-indicator-border-color: $gray-500 !default;
+// $custom-control-indicator-border-width: $input-border-width !default;
+
+// $custom-control-indicator-disabled-bg:          $input-disabled-bg !default;
+// $custom-control-label-disabled-color:           $gray-600 !default;
+
+$custom-control-indicator-checked-color:        $green;
+$custom-control-indicator-checked-bg:           $green;
+$custom-control-indicator-checked-disabled-bg:  rgba($green, .5);
+// $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default;
+
+$custom-control-indicator-focus-box-shadow:     0 0 0 .2rem rgba($green, .25);
+
+$custom-control-indicator-active-color:         $green;
+$custom-control-indicator-active-bg:            $green;
+// $custom-control-indicator-active-border-color:  $custom-control-indicator-active-bg !default;;
