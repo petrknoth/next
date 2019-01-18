@@ -37,7 +37,7 @@ class CookiesHandler extends React.Component {
                     checked
                     disabled
                   />
-                  <details className="ml-3" style={{ display: 'none' }}>
+                  <details className="ml-4">
                     <summary>What are these?</summary>
                     <p>
                       <strong>Required</strong> to make the site work, and to
@@ -51,7 +51,7 @@ class CookiesHandler extends React.Component {
                     id="exampleCustomSwitch"
                     label="Analytics"
                   />
-                  <details className="ml-3" style={{ display: 'none' }}>
+                  <details className="ml-4">
                     <summary>What are these?</summary>
                     <p>
                       Lets us (anonymously) track site usage, so that we can
