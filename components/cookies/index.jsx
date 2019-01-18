@@ -28,7 +28,7 @@ class CookiesHandler extends React.Component {
             <div className="cookies px-3">
               <Row>
                 <Col xs="12" sm="6" className="text-left">
-                  <p className="h4 m-1">Cookie settings</p>
+                  <p className="hero-text text-left m-1">Cookie settings</p>
                 </Col>
                 <Col xs="12" sm="6" className="text-right">
                   <Button
@@ -44,15 +44,13 @@ class CookiesHandler extends React.Component {
               <div className="switch-block py-3">
                 <Row>
                   <Col xs="12" sm="4" className="text-center">
-                    <span className="h6">
+                    <p className="h6">
                       <strong>
                         <em>Essential cookies</em>
                       </strong>
-                    </span>
-                    <br />
-                    <span>
+                      <br />
                       <em>&nbsp;</em>
-                    </span>
+                    </p>
                     <Form>
                       <FormGroup>
                         <div>
@@ -65,17 +63,19 @@ class CookiesHandler extends React.Component {
                         </div>
                       </FormGroup>
                     </Form>
+                    <p className="text-justify">
+                      <strong>Required</strong> to make the site work, and to
+                      save the options you make here
+                    </p>
                   </Col>
                   <Col xs="12" sm="4" className="text-center">
-                    <span className="h6">
+                    <p className="h6">
                       <strong>
                         <em>Enchanced cookies</em>
                       </strong>
-                    </span>
-                    <br />
-                    <span>
+                      <br />
                       <em>(we never see this data)</em>
-                    </span>
+                    </p>
                     <Form>
                       <FormGroup>
                         <div>
@@ -83,34 +83,38 @@ class CookiesHandler extends React.Component {
                             type="switch"
                             id="exampleCustomSwitch2"
                             name="customSwitch"
-                            label="On"
+                            label="Off/On"
                           />
                         </div>
                       </FormGroup>
                     </Form>
+                    <p className="text-justify">
+                      Let the site remember certain choices you make, to make
+                      tasks easier.
+                    </p>
                   </Col>
                   <Col xs="12" sm="4" className="text-center">
-                    <span className="h6">
+                    <p className="h6">
                       <strong>
                         <em>Analytics</em>
                       </strong>
-                    </span>
-                    <br />
-                    <span>
+                      <br />
                       <em>(anonymous)</em>
-                    </span>
+                    </p>
                     <Form>
                       <FormGroup>
                         <div>
                           <CustomInput
                             type="switch"
                             id="exampleCustomSwitch3"
-                            label="Off"
-                            disabled
+                            label="Off/On"
                           />
                         </div>
                       </FormGroup>
                     </Form>
+                    <p className="text-justify">
+                      Help us measure site performance and make improvements.
+                    </p>
                   </Col>
                 </Row>
               </div>
