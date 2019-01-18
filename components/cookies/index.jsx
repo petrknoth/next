@@ -1,14 +1,5 @@
 import React, { Fragment } from 'react'
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  CustomInput,
-  Form,
-  FormGroup,
-  UncontrolledCollapse,
-} from 'reactstrap'
+import { Button, CustomInput, Form, FormGroup } from 'reactstrap'
 import './cookies.scss'
 import { bind } from 'decko'
 
@@ -25,156 +16,67 @@ class CookiesHandler extends React.Component {
     return (
       <Fragment>
         {isClosed && (
-          <Container>
-            <div className="cookies px-3">
-              <Row>
-                <Col xs="12" sm="6" className="text-left">
-                  <p className="hero-text text-left m-1">Cookie settings</p>
-                </Col>
-                <Col xs="12" sm="6" className="text-right">
-                  <Button
-                    color="link"
-                    type="button"
-                    title="Close"
-                    onClick={this.close}
-                  >
-                    Save and close
-                  </Button>
-                </Col>
-              </Row>
-              <div className="switch-block py-3">
-                <Row>
-                  <Col xs="12" sm="4" className="text-center">
-                    <p className="h6">
-                      <strong>
-                        <em>Essential cookies</em>
-                      </strong>
-                      <br />
-                      &nbsp;
+          <div className="cookies p-3">
+            <span className="hero-text text-left m-1">Cookie settings</span>
+            <Button
+              color="primary"
+              type="button"
+              title="Close"
+              onClick={this.close}
+              outline
+            >
+              Save
+            </Button>
+
+            <div className="py-3">
+              <Form>
+                <FormGroup check>
+                  <CustomInput
+                    type="checkbox"
+                    label="Essential cookies"
+                    checked
+                    disabled
+                  />
+                  <details className="ml-3">
+                    <summary>What are these?</summary>
+                    <p>
+                      <strong>Required</strong> to make the site work, and to
+                      save the options you make here
                     </p>
-                    <Form>
-                      <FormGroup>
-                        <div>
-                          <CustomInput
-                            type="checkbox"
-                            id="exampleCustomCheckbox3"
-                            label=""
-                            checked
-                            disabled
-                          />
-                        </div>
-                      </FormGroup>
-                    </Form>
-                    <Button
-                      className="no-text-decoration mb-1"
-                      color="link"
-                      type="button"
-                      id="toggler1"
-                    >
-                      &#9654; &nbsp; What are these?
-                    </Button>
-                    <UncontrolledCollapse toggler="#toggler1">
+                  </details>
+                </FormGroup>
+              </Form>
+              <Form>
+                <FormGroup>
+                  <div className="m-3">
+                    <CustomInput
+                      type="switch"
+                      id="exampleCustomSwitch"
+                      label="Analytics"
+                    />
+                    <details className="ml-3">
+                      <summary>What are these?</summary>
                       <p>
-                        <strong>Required</strong> to make the site work, and to
-                        save the options you make here
+                        Lets us (anonymously) track site usage, so that we can
+                        measure performance and make improvements.
                       </p>
-                    </UncontrolledCollapse>
-                  </Col>
-                  <Col xs="12" sm="4" className="text-center">
-                    <p className="h6">
-                      <strong>
-                        <em>Enhanced cookies</em>
-                      </strong>
-                      <br />
-                      <em>(we never see this data)</em>
-                    </p>
-                    <Form>
-                      <FormGroup>
-                        <div>
-                          <CustomInput
-                            type="switch"
-                            id="exampleCustomSwitch2"
-                            name="customSwitch"
-                            label="Off/On"
-                          />
-                        </div>
-                      </FormGroup>
-                    </Form>
-                    <Button
-                      className="no-text-decoration mb-1"
-                      color="link"
-                      type="button"
-                      id="toggler2"
-                    >
-                      &#9654; &nbsp; What are these?
-                    </Button>
-                    <UncontrolledCollapse toggler="#toggler2">
-                      <p>
-                        Let the site remember certain choices you make, to make
-                        tasks easier.
-                      </p>
-                    </UncontrolledCollapse>
-                  </Col>
-                  <Col xs="12" sm="4" className="text-center">
-                    <p className="h6">
-                      <strong>
-                        <em>Analytics</em>
-                      </strong>
-                      <br />
-                      <em>(anonymous)</em>
-                    </p>
-                    <Form>
-                      <FormGroup>
-                        <div>
-                          <CustomInput
-                            type="switch"
-                            id="exampleCustomSwitch3"
-                            label="Off/On"
-                          />
-                        </div>
-                      </FormGroup>
-                    </Form>
-                    <Button
-                      className="no-text-decoration mb-1"
-                      color="link"
-                      type="button"
-                      id="toggler3"
-                    >
-                      &#9654; &nbsp; What are these?
-                    </Button>
-                    <UncontrolledCollapse toggler="#toggler3">
-                      <p>
-                        Help us measure site performance and make improvements.
-                      </p>
-                    </UncontrolledCollapse>
-                  </Col>
-                </Row>
-              </div>
-              <div>
-                <Row>
-                  <Col xs="12" sm="4" className="text-center" />
-                  <Col xs="12" sm="4" className="text-center">
-                    <Button
-                      color="primary"
-                      type="button"
-                      className="btn-block mt-3"
-                    >
-                      Save
-                    </Button>
-                  </Col>
-                  <Col
-                    xs="12"
-                    sm="4"
-                    className="text-sm-right text-center my-3"
-                  >
-                    <Button color="link" type="button">
-                      Read more about how we use cookies
-                    </Button>
-                  </Col>
-                </Row>
-              </div>
+                    </details>
+                  </div>
+                </FormGroup>
+              </Form>
+              <Button
+                onClick={this.close}
+                color="primary"
+                type="button"
+                className="d-block mt-3 ml-3"
+              >
+                Save
+              </Button>
+              <Button color="link" type="button" className="d-block mt-3">
+                Read more about how we use cookies
+              </Button>
             </div>
-          </Container>
+          </div>
         )}
       </Fragment>
     )
