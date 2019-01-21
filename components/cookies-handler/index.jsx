@@ -4,18 +4,18 @@ import './cookies-handler.scss'
 import { bind } from 'decko'
 
 class CookiesHandler extends React.Component {
-  state = { isClosed: true }
+  state = { isOpen: true }
 
   @bind
   close() {
-    this.setState(({ isClosed }) => ({ isClosed: !isClosed }))
+    this.setState(({ isOpen }) => ({ isOpen: !isOpen }))
   }
 
   render() {
-    const { isClosed } = this.state
+    const { isOpen } = this.state
     return (
       <Fragment>
-        {isClosed && (
+        {isOpen && (
           <div className="cookies p-3">
             <span className="hero-text text-left m-1">Cookie settings</span>
             <Button
