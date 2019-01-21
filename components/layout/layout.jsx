@@ -6,7 +6,7 @@ import Header from '../header'
 import Footer from '../footer'
 
 import './layout.scss'
-import CookiesHandler from '../cookies-handler'
+import CookiesHandler from '../cookies'
 
 const Layout = ({
   title,

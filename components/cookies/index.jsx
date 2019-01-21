@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button, CustomInput, Form, FormGroup } from 'reactstrap'
-import './cookies-handler.scss'
+import './cookies.scss'
 import { bind } from 'decko'
 
-class CookiesHandler extends React.Component {
+class Cookies extends React.Component {
   state = { isOpen: true }
 
   @bind
@@ -80,4 +80,4 @@ class CookiesHandler extends React.Component {
   }
 }
 
-export default CookiesHandler
+export default Cookies
