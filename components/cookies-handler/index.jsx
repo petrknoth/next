@@ -73,9 +73,7 @@ class CookiesHandler extends React.Component {
           >
             Save
           </Button>
-          <a href="https://www.google.com/">
-            Read more about how we use cookies
-          </a>
+          <a href="privacy#cookies">Read more about how we use cookies</a>
         </div>
       </div>
     )
