@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Button, CustomInput, Form, FormGroup } from 'reactstrap'
-import './cookies.scss'
+import './cookies-handler.scss'
 import { bind } from 'decko'
 
 class CookiesHandler extends React.Component {
@@ -79,10 +79,4 @@ class CookiesHandler extends React.Component {
   }
 }
 
-const Cookies = () => (
-  <Fragment>
-    <CookiesHandler />
-  </Fragment>
-)
-
-export default Cookies
+export default CookiesHandler

@@ -6,7 +6,7 @@ import Header from '../header'
 import Footer from '../footer'
 
 import './layout.scss'
-import Cookies from '../cookies'
+import CookiesHandler from '../cookies-handler'
 
 const Layout = ({
   title,
@@ -29,7 +29,7 @@ const Layout = ({
     <Header className="page-header" siteMap={navigation} />
     {container ? <Container>{children}</Container> : children}
     <Footer className="page-footer" {...footer} />
-    <Cookies />
+    <CookiesHandler />
   </Fragment>
 )
 
