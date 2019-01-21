@@ -33,6 +33,7 @@ class CookiesHandler extends React.Component {
             <FormGroup>
               <CustomInput
                 id="essential-cookies"
+                name="essential-cookies"
                 type="switch"
                 label="Essential cookies"
                 checked
@@ -47,7 +48,12 @@ class CookiesHandler extends React.Component {
               </details>
             </FormGroup>
             <FormGroup>
-              <CustomInput id="analytics" type="switch" label="Analytics" />
+              <CustomInput
+                id="analytics"
+                name="analytics"
+                type="switch"
+                label="Analytics"
+              />
               <details className="ml-4">
                 <summary>What are these?</summary>
                 <p>
