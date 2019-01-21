@@ -15,7 +15,7 @@ class CookiesHandler extends React.Component {
     const { isOpen } = this.state
     return (
       <Fragment>
-        {isOpen && (
+        {isOpen && !null && (
           <div className="cookies p-3">
             <span className="hero-text text-left m-1">Cookie settings</span>
             <Button
