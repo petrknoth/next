@@ -24,11 +24,3 @@
 .cookies-header {
   font-size: $lead-font-size;
 }
-
-.no-text-decoration {
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-  }
-}
