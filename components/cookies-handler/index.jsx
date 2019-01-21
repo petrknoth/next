@@ -68,9 +68,12 @@ class CookiesHandler extends React.Component {
               >
                 Save
               </Button>
-              <Button color="link" type="button" className="d-block mt-3">
+              <a
+                href="https://www.google.com/"
+                className="d-block mt-3 text-center"
+              >
                 Read more about how we use cookies
-              </Button>
+              </a>
             </div>
           </div>
         )}
