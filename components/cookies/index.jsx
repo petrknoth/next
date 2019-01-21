@@ -1,19 +1,29 @@
 import React from 'react'
 import { Button, CustomInput, Form, FormGroup } from 'reactstrap'
 import './cookies.scss'
-import { bind } from 'decko'
+// import { bind } from 'decko'
 
 class Cookies extends React.Component {
-  state = { isOpen: true }
-
-  @bind
-  applyCookies() {
-    console.log('apply cookies & close tab')
-    this.setState(({ isOpen }) => ({ isOpen: !isOpen }))
+  constructor(props) {
+    super(props)
+    this.applyCookies = this.applyCookies.bind(this)
   }
 
+  applyCookies() {
+    console.log('apply cookies & close tab')
+    this.props = false
+  }
+
+  // state = { isOpen: true }
+  // @bind
+  // applyCookies() {
+  //   console.log('apply cookies & close tab')
+  //   this.setState(({ isOpen }) => ({ isOpen: !isOpen }))
+  // }
+
   render() {
-    if (!this.state.isOpen) return null
+    // if (!this.state.isOpen) return null
+    if (!this.props) return null
     return (
       <div className="cookies-settings p-3">
         <span className="cookies-header m-1">Cookie settings</span>
@@ -22,7 +32,7 @@ class Cookies extends React.Component {
           color="primary"
           type="button"
           title="Apply cookies"
-          onClick={this.applyCookies}
+          onClick={this.props.applyCookies}
           outline
         >
           Save
