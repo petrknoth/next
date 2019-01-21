@@ -1,6 +1,6 @@
 @import "../bootstrap/core";
 
-.cookies {
+.cookies-settings {
   position: fixed;
   top: auto;
   right: 0;
@@ -21,8 +21,8 @@
   }
 }
 
-.cookies-close {
-  display: none;
+.cookies-header {
+  font-size: $lead-font-size;
 }
 
 .no-text-decoration {
@@ -31,12 +31,4 @@
   &:focus {
     text-decoration: none;
   }
-}
-
-.switch-block {
-  background-color: $gray-200;
-}
-
-.cookies-header {
-  font-size: $lead-font-size;
 }

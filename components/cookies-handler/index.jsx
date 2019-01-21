@@ -17,9 +17,10 @@ class CookiesHandler extends React.Component {
     return (
       <Fragment>
         {isOpen && !null && (
-          <div className="cookies p-3">
+          <div className="cookies-settings p-3">
             <span className="cookies-header m-1">Cookie settings</span>
             <Button
+              id="apply-cookies-btn1"
               color="primary"
               type="button"
               title="Apply cookies"
@@ -33,6 +34,7 @@ class CookiesHandler extends React.Component {
               <Form>
                 <FormGroup>
                   <CustomInput
+                    id="essential-cookies"
                     type="switch"
                     label="Essential cookies"
                     checked
@@ -47,11 +49,7 @@ class CookiesHandler extends React.Component {
                   </details>
                 </FormGroup>
                 <FormGroup>
-                  <CustomInput
-                    type="switch"
-                    id="exampleCustomSwitch"
-                    label="Analytics"
-                  />
+                  <CustomInput id="analytics" type="switch" label="Analytics" />
                   <details className="ml-4">
                     <summary>What are these?</summary>
                     <p>
@@ -62,18 +60,16 @@ class CookiesHandler extends React.Component {
                 </FormGroup>
               </Form>
               <Button
+                id="apply-cookies-btn2"
                 title="Apply cookies"
                 onClick={this.applyCookies}
                 color="primary"
                 type="button"
-                className="d-block mt-3 ml-3"
+                className="d-block my-3 ml-3"
               >
                 Save
               </Button>
-              <a
-                href="https://www.google.com/"
-                className="d-block mt-3 text-center"
-              >
+              <a href="https://www.google.com/">
                 Read more about how we use cookies
               </a>
             </div>
