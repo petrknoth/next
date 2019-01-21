@@ -16,7 +16,7 @@
   background: $beige-dark;
 
   @include media-breakpoint-up("md") {
-    width: auto;
+    width: 320px;
     left: auto;
   }
 }
