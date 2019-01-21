@@ -7,7 +7,8 @@ class CookiesHandler extends React.Component {
   state = { isOpen: true }
 
   @bind
-  close() {
+  applyCookies() {
+    console.log('apply cookies & close tab')
     this.setState(({ isOpen }) => ({ isOpen: !isOpen }))
   }
 
@@ -21,8 +22,8 @@ class CookiesHandler extends React.Component {
             <Button
               color="primary"
               type="button"
-              title="Close"
-              onClick={this.close}
+              title="Apply cookies"
+              onClick={this.applyCookies}
               outline
             >
               Save
@@ -61,7 +62,8 @@ class CookiesHandler extends React.Component {
                 </FormGroup>
               </Form>
               <Button
-                onClick={this.close}
+                title="Apply cookies"
+                onClick={this.applyCookies}
                 color="primary"
                 type="button"
                 className="d-block mt-3 ml-3"
