@@ -75,7 +75,7 @@ class Cookies extends React.Component {
                 onClick={onSubmit}
                 color="primary"
                 type="button"
-                className="m-3"
+                className="mx-3"
               >
                 Save & Close
               </Button>
