@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, CustomInput, Form, FormGroup } from 'reactstrap'
+import Link from '../link'
 import './cookies.scss'
 // import { bind } from 'decko'
 
@@ -83,7 +84,9 @@ class Cookies extends React.Component {
           >
             Save
           </Button>
-          <a href="privacy#cookies">Read more about how we use cookies</a>
+          <Link href="~privacy#cookies">
+            Read more about how we use cookies
+          </Link>
         </div>
       </div>
     )
