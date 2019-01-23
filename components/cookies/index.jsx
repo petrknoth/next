@@ -26,7 +26,6 @@ class Cookies extends React.Component {
   render() {
     const action = () => console.log('Form action performed')
     const method = 'POST'
-    const onCancel = () => console.log('Cancel button pressed')
     const onSubmit = () => console.log('Submit button pressed')
 
     // if (!this.state.isOpen) return null
@@ -34,18 +33,8 @@ class Cookies extends React.Component {
     return (
       <div className="cookies-settings p-3">
         <span className="cookies-header m-1">Cookie settings</span>
-        <Button
-          id="apply-cookies-btn1"
-          color="primary"
-          type="button"
-          title="Apply cookies"
-          onClick={onSubmit}
-          outline
-        >
-          Save
-        </Button>
 
-        <div className="py-3">
+        <div>
           <Form action={action} method={method} onSubmit={onSubmit}>
             <FormGroup>
               <CustomInput
@@ -79,32 +68,20 @@ class Cookies extends React.Component {
                 </p>
               </details>
             </FormGroup>
-            <Button
-              id="apply-cookies-btn2"
-              title="Apply cookies"
-              onClick={onSubmit}
-              color="primary"
-              type="button"
-              className=" my-3 ml-3"
-            >
-              Save
-            </Button>
-            <Button
-              id="apply-cookies-btn3"
-              title="Apply cookies"
-              onClick={onCancel}
-              color="primary"
-              type="button"
-              className=" my-3 ml-3"
-              outline
-            >
-              Cancel
-            </Button>
+            <FormGroup>
+              <Button
+                id="apply-cookies-btn2"
+                title="Apply cookies"
+                onClick={onSubmit}
+                color="primary"
+                type="button"
+                className="m-3"
+              >
+                Save & Close
+              </Button>
+              <Link href="~privacy#cookies">Read more</Link>
+            </FormGroup>
           </Form>
-
-          <Link href="~privacy#cookies">
-            Read more about how we use cookies
-          </Link>
         </div>
       </div>
     )
