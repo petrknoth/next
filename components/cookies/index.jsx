@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, CustomInput, Form, FormGroup } from 'reactstrap'
 import Link from '../link'
 import './cookies.scss'
+
 // import { bind } from 'decko'
 
 class Cookies extends React.Component {
@@ -23,6 +24,11 @@ class Cookies extends React.Component {
   // }
 
   render() {
+    const action = () => console.log('Form action performed')
+    const method = 'POST'
+    const onCancel = () => console.log('Cancel button pressed')
+    const onSubmit = () => console.log('Submit button pressed')
+
     // if (!this.state.isOpen) return null
     if (!this.props) return null
     return (
@@ -33,14 +39,14 @@ class Cookies extends React.Component {
           color="primary"
           type="button"
           title="Apply cookies"
-          onClick={this.props.applyCookies}
+          onClick={onSubmit}
           outline
         >
           Save
         </Button>
 
         <div className="py-3">
-          <Form>
+          <Form action={action} method={method} onSubmit={onSubmit}>
             <FormGroup>
               <CustomInput
                 id="essential-cookies"
@@ -73,17 +79,29 @@ class Cookies extends React.Component {
                 </p>
               </details>
             </FormGroup>
+            <Button
+              id="apply-cookies-btn2"
+              title="Apply cookies"
+              onClick={onSubmit}
+              color="primary"
+              type="button"
+              className=" my-3 ml-3"
+            >
+              Save
+            </Button>
+            <Button
+              id="apply-cookies-btn3"
+              title="Apply cookies"
+              onClick={onCancel}
+              color="primary"
+              type="button"
+              className=" my-3 ml-3"
+              outline
+            >
+              Cancel
+            </Button>
           </Form>
-          <Button
-            id="apply-cookies-btn2"
-            title="Apply cookies"
-            onClick={this.applyCookies}
-            color="primary"
-            type="button"
-            className="d-block my-3 ml-3"
-          >
-            Save
-          </Button>
+
           <Link href="~privacy#cookies">
             Read more about how we use cookies
           </Link>
