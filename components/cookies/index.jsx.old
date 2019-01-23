@@ -1,16 +1,9 @@
 import React from 'react'
-import {
-  CustomInput,
-  Form,
-  FormGroup,
-  Card,
-  Button,
-  CardHeader,
-  CardFooter,
-  CardBody,
-} from 'reactstrap'
+import { Button, CustomInput, Form, FormGroup } from 'reactstrap'
 import Link from '../link'
 import './cookies.scss'
+
+// import { bind } from 'decko'
 
 class Cookies extends React.Component {
   constructor(props) {
@@ -23,17 +16,26 @@ class Cookies extends React.Component {
     this.props = false
   }
 
+  // state = { isOpen: true }
+  // @bind
+  // applyCookies() {
+  //   console.log('apply cookies & close tab')
+  //   this.setState(({ isOpen }) => ({ isOpen: !isOpen }))
+  // }
+
   render() {
     const action = () => console.log('Form action performed')
     const method = 'POST'
     const onSubmit = () => console.log('Submit button pressed')
 
+    // if (!this.state.isOpen) return null
     if (!this.props) return null
     return (
-      <Form action={action} method={method} onSubmit={onSubmit}>
-        <Card className="cookies-settings">
-          <CardHeader className="cookies-header">Cookie settings</CardHeader>
-          <CardBody>
+      <div className="cookies-settings p-3">
+        <span className="cookies-header m-1">Cookie settings</span>
+
+        <div>
+          <Form action={action} method={method} onSubmit={onSubmit}>
             <FormGroup>
               <CustomInput
                 id="essential-cookies"
@@ -66,24 +68,22 @@ class Cookies extends React.Component {
                 </p>
               </details>
             </FormGroup>
-          </CardBody>
-          <CardFooter>
-            <div className="text-md-center">
+            <FormGroup>
               <Button
                 id="apply-cookies-btn2"
                 title="Apply cookies"
                 onClick={onSubmit}
                 color="primary"
                 type="button"
-                className="mr-3"
+                className="mx-3"
               >
                 Save & Close
               </Button>
               <Link href="~privacy#cookies">Read more</Link>
-            </div>
-          </CardFooter>
-        </Card>
-      </Form>
+            </FormGroup>
+          </Form>
+        </div>
+      </div>
     )
   }
 }
