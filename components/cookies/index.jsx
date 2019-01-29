@@ -31,7 +31,7 @@ class Cookies extends React.Component {
     if (!this.props) return null
     return (
       <Form action={action} method={method} onSubmit={onSubmit}>
-        <Card className="cookies-settings">
+        <Card className="slideInUp cookies-settings">
           <CardHeader className="cookies-header">Cookie settings</CardHeader>
           <CardBody>
             <FormGroup>
