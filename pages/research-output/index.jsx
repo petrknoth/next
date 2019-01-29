@@ -35,7 +35,7 @@ const ResearchOutput = () => (
       <Section id="core-vision" caption="CORE vision">
         <h3>{researchData.allarticles.vision.title}</h3>
         <Row>
-          <Col xs="12" lg="9" tag="section">
+          <Col xs="12" lg="9">
             <Card className="card-border">
               <CardHeader className="card-header">
                 <Content markdown>
