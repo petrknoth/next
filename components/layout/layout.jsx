@@ -25,11 +25,10 @@ const Layout = ({
       <title>{title}</title>
       <meta name="description" content={description} />
     </Head>
-
+    <Cookies />
     <Header className="page-header" siteMap={navigation} />
     {container ? <Container>{children}</Container> : children}
     <Footer className="page-footer" {...footer} />
-    <Cookies />
   </Fragment>
 )
 
