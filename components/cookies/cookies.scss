@@ -2,20 +2,33 @@
 
 .cookies-settings {
   position: fixed;
-  top: auto;
   right: 0;
   bottom: 0;
   width: 100%;
-  left: 0;
+  margin-right: 0;
   overflow: hidden;
   box-shadow: 0 0 5px 0 rgba($black, 0.25);
   transition: height 0.5s;
   z-index: 99;
   background: $beige-dark;
 
+  @include media-breakpoint-up("sm") {
+    width: 300px;
+    margin-right: calc((100vw - 520px) / 2);
+    background: $blue;
+  }
+
   @include media-breakpoint-up("md") {
     width: 300px;
-    left: auto;
+    margin-right: calc((100vw - 690px) / 2);
+    background: $green;
+  }
+
+  @include media-breakpoint-up("lg") {
+    width: 300px;
+    margin-right: calc((100vw - 1120px) / 2);
+    //margin-right: calc((100vw - 930px) / 2);
+    background: $yellow;
   }
 }
 
