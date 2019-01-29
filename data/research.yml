@@ -1,0 +1,27 @@
+title: Research outputs by CORE
+featuredarticles:
+  title: Featured articles
+  content: |
+    * [CORE vision and mission](https://google.com)
+    * [Aggregation & infrastructure](https://google.com)
+    * [CORE Recommender](https://google.com)
+    * [CORE Repositories dashboard](https://google.com)
+    * [CORE download statistics](https://google.com)
+
+allarticles:
+  title: All articles
+  vision:
+    title: CORE vision and mission
+    content: |
+      If you use CORE, CORE services or CORE data in your research, we kindly request your cite this publication
+
+      * [CORE download statistics](https://google.com)
+
+      Knoth, P. and Zdrahal, Z. (2012)
+
+      D-Lib Magazine, 18, 11/12, Corporation for National Research Initiatives.
+
+      Sets the vision for creating the CORE service, developing global-wide content aggregation of all open access research literature (on top of OAI-PMH protocol for metadata harvesting and other protocols). It sets the mission to develop the three access levels (access ar the granularity of pappers; analytical access; access to raw data) via CORE.
+
+
+
