@@ -21,7 +21,6 @@ const ResearchOutput = () => (
     <Section id="all-articles" caption="All articles">
       <Row>
         <Col xs="12" lg="9">
-          <h2>{researchData.allarticles.title}</h2>
           <ArticleFirst />
           <ArticleSecond />
         </Col>

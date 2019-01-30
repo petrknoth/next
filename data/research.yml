@@ -2,11 +2,12 @@ title: Research outputs by CORE
 featuredarticles:
   title: Featured articles
   content: |
-    * [CORE vision and mission](#core-vision)
-    * [Aggregation & infrastructure](#core-vision)
-    * [CORE Recommender](#core-vision)
-    * [CORE Repositories dashboard](#core-vision)
-    * [CORE download statistics](#core-vision)
+    Topics: &nbsp;
+    [CORE vision and mission](#core-vision), &nbsp;
+    [Aggregation & infrastructure](#core-aggregation), &nbsp;
+    [CORE Recommender](#core-vision), &nbsp;
+    [CORE Repositories dashboard](#core-vision), &nbsp;
+    [CORE download statistics](#core-vision)
 
 allarticles:
   title: All articles
