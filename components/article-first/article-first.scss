@@ -1,0 +1,10 @@
+@import "../../components/bootstrap/core";
+
+.card-border {
+  border: 10px solid $blue-light !important;
+}
+
+.card-header {
+  background-color: $blue-light !important;
+  border-color: $blue-light !important;
+}
