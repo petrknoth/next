@@ -17,10 +17,37 @@ allarticles:
     cardtitle: |
       [CORE download statistics](https://google.com)
 
-      Knoth, P. and Zdrahal, Z. (2012)
+      Knoth, P. and Zdrahal, Z. (2012) <br />
       D-Lib Magazine, 18, 11/12, Corporation for National Research Initiatives.
     cardtext: |
       Sets the vision for creating the CORE service, developing global-wide content aggregation of all open access research literature (on top of OAI-PMH protocol for metadata harvesting and other protocols). It sets the mission to develop the three access levels (access ar the granularity of pappers; analytical access; access to raw data) via CORE.
+
+
+
+  aggregation:
+    title: CORE aggregation approaches and infrasrtucture
+    cardtitle1: |
+      [From Open Access Metadata to Open Access Content: Two Principles for Increased Visibility of Open Access Content](https://google.com)
+
+      Knoth, P. (2013) <br />
+      Open Repositories 2013, Charlottetown, Prince Edward Island, Canada.
+    cardtext1: |
+      This paper describes the two principles that should be followed to ensure that content can be properly harvested from repositories.
+
+    cardfooter1: |
+      *This papper could be of great interest to* **repository managers**.
+
+
+    cardtitle2: |
+      [From Open Access Metadata to Open Access Content: Two Principles for Increased Visibility of Open Access Content](https://google.com)
+
+      Knoth, P. (2013) <br />
+      Open Repositories 2013, Charlottetown, Prince Edward Island, Canada.
+    cardtext2: |
+      This paper describes the two principles that should be followed to ensure that content can be properly harvested from repositories.
+
+    cardfooter2: |
+      *This papper could be of great interest to* **repository managers**.
 
 
 
