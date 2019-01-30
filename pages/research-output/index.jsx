@@ -5,6 +5,7 @@ import { Article, Content, Section } from 'components'
 import researchData from '../../data/research.yml'
 import ArticleFirst from '../../components/article-first'
 import ArticleSecond from '../../components/article-second'
+import ArticleThird from '../../components/article-third'
 
 const ResearchOutput = () => (
   <Article nav tag="main">
@@ -12,7 +13,7 @@ const ResearchOutput = () => (
 
     <Section id="featured-articles" caption="Featured articles">
       <Row>
-        <Col xs="12" lg="9" tag="section">
+        <Col xs="12" lg="9">
           <h2>{researchData.featuredarticles.title}</h2>
           <Content markdown>{researchData.featuredarticles.content}</Content>
         </Col>
@@ -23,6 +24,7 @@ const ResearchOutput = () => (
         <Col xs="12" lg="9">
           <ArticleFirst />
           <ArticleSecond />
+          <ArticleThird />
         </Col>
       </Row>
     </Section>

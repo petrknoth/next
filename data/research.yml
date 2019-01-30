@@ -5,9 +5,9 @@ featuredarticles:
     Topics: &nbsp;
     [CORE vision and mission](#core-vision), &nbsp;
     [Aggregation & infrastructure](#core-aggregation), &nbsp;
-    [CORE Recommender](#core-vision), &nbsp;
-    [CORE Repositories dashboard](#core-vision), &nbsp;
-    [CORE download statistics](#core-vision)
+    [CORE Recommender](#core-recommender), &nbsp;
+    [CORE Repositories dashboard](#core-repositories), &nbsp;
+    [CORE download statistics](#core-statistics)
 
 allarticles:
   title: All articles
@@ -27,6 +27,33 @@ allarticles:
 
   aggregation:
     title: CORE aggregation approaches and infrasrtucture
+    cardtitle1: |
+      [From Open Access Metadata to Open Access Content: Two Principles for Increased Visibility of Open Access Content](https://google.com)
+
+      Knoth, P. (2013) <br />
+      Open Repositories 2013, Charlottetown, Prince Edward Island, Canada.
+    cardtext1: |
+      This paper describes the two principles that should be followed to ensure that content can be properly harvested from repositories.
+
+    cardfooter1: |
+      *This papper could be of great interest to* **repository managers**.
+
+
+    cardtitle2: |
+      [From Open Access Metadata to Open Access Content: Two Principles for Increased Visibility of Open Access Content](https://google.com)
+
+      Knoth, P. (2013) <br />
+      Open Repositories 2013, Charlottetown, Prince Edward Island, Canada.
+    cardtext2: |
+      This paper describes the two principles that should be followed to ensure that content can be properly harvested from repositories.
+
+    cardfooter2: |
+      *This papper could be of great interest to* **repository managers**.
+
+
+
+  recommender:
+    title: CORE Recommender
     cardtitle1: |
       [From Open Access Metadata to Open Access Content: Two Principles for Increased Visibility of Open Access Content](https://google.com)
 
