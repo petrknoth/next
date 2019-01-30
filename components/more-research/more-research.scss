@@ -1,0 +1,11 @@
+@import "../../components/bootstrap/core";
+
+.more-research-tag {
+  color: $blue;
+  background-color: $blue-light;
+
+  @include hover-focus {
+    color: $white;
+    background-color: $blue;
+  }
+}

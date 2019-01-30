@@ -6,6 +6,7 @@ import researchData from '../../data/research.yml'
 import ArticleFirst from '../../components/article-first'
 import ArticleSecond from '../../components/article-second'
 import ArticleThird from '../../components/article-third'
+import MoreResearch from '../../components/more-research'
 
 const ResearchOutput = () => (
   <Article nav tag="main">
@@ -25,6 +26,7 @@ const ResearchOutput = () => (
           <ArticleFirst />
           <ArticleSecond />
           <ArticleThird />
+          <MoreResearch />
         </Col>
       </Row>
     </Section>

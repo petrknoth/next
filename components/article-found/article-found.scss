@@ -1,0 +1,14 @@
+@import "../../components/bootstrap/core";
+
+.article-second-card {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top-width: 0.25rem;
+  border-top-color: $gray-300 !important;
+  background-color: $gray-100 !important;
+}
+
+.article-notation {
+  background-color: $gray-200 !important;
+}

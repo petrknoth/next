@@ -51,7 +51,6 @@ allarticles:
       *This papper could be of great interest to* **repository managers**.
 
 
-
   recommender:
     title: CORE Recommender
     cardtitle1: |
@@ -79,3 +78,14 @@ allarticles:
 
 
 
+  found:
+    cardtitle: |
+      [From Open Access Metadata to Open Access Content: Two Principles for Increased Visibility of Open Access Content](https://google.com)
+
+      Knoth, P. (2013) <br />
+      Open Repositories 2013, Charlottetown, Prince Edward Island, Canada.
+    cardtext: |
+      This paper describes the two principles that should be followed to ensure that content can be properly harvested from repositories.
+
+    cardfooter: |
+      *This papper could be of great interest to* **repository managers**.
