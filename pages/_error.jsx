@@ -1,1 +1,1 @@
-export { default } from 'components/error'
+export { ErrorPage as default } from 'components/pages'

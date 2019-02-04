@@ -1,7 +1,6 @@
 import React from 'react'
-import { Article, Content } from 'components'
-import HighlightSection from 'components/highlight-section'
-import Link from 'components/link'
+import { Article, Content, Link } from 'components'
+import HighlightSection from 'components/sections'
 
 import datasetData from 'data/dataset.yml'
 

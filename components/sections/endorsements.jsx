@@ -1,9 +1,8 @@
 import React from 'react'
-import { Row, Col, Button } from 'reactstrap'
-import { Section, Content } from '../content'
-import LogosCarousel from '../logos-carousel'
-import TestimonialsCarousel from '../testimonials-carousel'
-import Link from '../link'
+import { Row, Col } from 'reactstrap'
+import { Button, Link } from '../base'
+import { LogosCarousel, TestimonialsCarousel } from '../blocks'
+import { Section, Content } from '../layout'
 
 import './endorsements.scss'
 

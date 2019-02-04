@@ -1,5 +1,5 @@
 import React from 'react'
-import { Article } from '../content'
+import { Article } from '../layout'
 import { DescriptionSection } from '../sections'
 
 const SectionedPage = ({

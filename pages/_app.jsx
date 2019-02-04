@@ -1,6 +1,6 @@
 import React from 'react'
 import NextApp, { Container as NextContainer } from 'next/app'
-import Layout from 'components/layout'
+import {Page as Layout} from 'components/layout'
 import config from 'data/core.yml'
 
 class App extends NextApp {

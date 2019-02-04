@@ -1,7 +1,6 @@
 import React from 'react'
-import { Button } from 'reactstrap'
-import { Section, Content } from '../content'
-import Link from '../link'
+import { Button } from '../base'
+import { Section, Content } from '../layout'
 
 const renderSections = (sections, Component) =>
   sections.map(({ id, title, ...restProps }) => (
@@ -19,11 +18,9 @@ const DescriptionSection = ({
   subsectionComponent = DescriptionSection,
 }) => {
   const actionComponent = action && (
-    <Link href={action.url} passHref>
-      <Button outline color="primary">
-        {action.caption}
-      </Button>
-    </Link>
+    <Button href={action.url} color="primary" outline>
+      {action.caption}
+    </Button>
   )
 
   const bodyComponent = children || (

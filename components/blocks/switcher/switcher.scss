@@ -1,0 +1,50 @@
+@import "../../bootstrap/core";
+
+.switcher {
+  overflow: hidden;
+}
+
+.switcher-item {
+  width: 100%;
+  flex: 0 0 100%;
+  order: 1;
+  opacity: 0;
+  transition: 500ms;
+
+  &.active {
+    order: 0;
+    opacity: 1;
+  }
+}
+
+.switcher-item-list {
+  display: flex;
+}
+
+.switcher-controllers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -(map-get($spacers, 1));
+}
+
+.switcher-button {
+  margin: 0 (map-get($spacers, 1) / 2) map-get($spacers, 1);
+  border: $btn-border-width solid transparent;
+
+  &.active {
+    border-color: $primary;
+  }
+
+  img {
+    display: block;
+    width: 8rem;
+    height: 6rem;
+    object-fit: contain;
+    filter: saturate(0);
+  }
+
+  &.active img {
+    filter: none;
+  }
+}

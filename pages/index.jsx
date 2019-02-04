@@ -1,19 +1,16 @@
 import React from 'react'
-import { Button } from 'reactstrap'
 import { bind } from 'decko'
 
 import {
-  Hero,
-  KeyFeature,
-  KeyFeatureList,
+  Button,
+  KeyFeatures,
   Switcher,
   Content,
   Section,
   Article,
 } from 'components'
-import { JoinSection } from 'components/sections'
+import { JoinSection, HeroSection as Hero } from 'components/sections'
 import SearchForm from 'components/search'
-import Link from 'components/link'
 
 import page from 'data/home.yml'
 import { sections as pageSections } from 'data/endorsements.yml'
@@ -76,11 +73,9 @@ class TestimonialsSection extends Section {
         />
         {more && (
           <div className="mt-3 text-center">
-            <Link href={`~endorsements${itemHash}`} passHref>
-              <Button color="primary" outline>
-                {more}
-              </Button>
-            </Link>
+            <Button href={`~endorsements${itemHash}`} color="primary" outline>
+              {more}
+            </Button>
           </div>
         )}
       </Section>
@@ -98,13 +93,13 @@ const IndexPage = () => (
 
     <Section className="pb-section-lg">
       <h2 className="sr-only">{page.features.title}</h2>
-      <KeyFeatureList>
+      <KeyFeatures>
         {page.features.children.map(({ title, description, picture }) => (
-          <KeyFeature title={title} icon={picture} key={title}>
+          <KeyFeatures.Item title={title} icon={picture} key={title}>
             <Content markdown>{description}</Content>
-          </KeyFeature>
+          </KeyFeatures.Item>
         ))}
-      </KeyFeatureList>
+      </KeyFeatures>
     </Section>
 
     <JoinSection id="join-us" {...page.join} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Article } from 'components/content'
+import { Article } from 'components'
 import EndorsementsSection from 'components/sections/endorsements'
 import { title, sections } from 'data/endorsements.yml'
 

@@ -1,9 +1,13 @@
 import React from 'react'
 import { Button } from 'reactstrap'
-import { Article, Content, Section } from 'components'
-import Link from 'components/link'
-import RepositoryMap from 'components/repositories-map'
-import RepositoryBrowser from 'components/repositories-browser'
+import {
+  Article,
+  Content,
+  Section,
+  Link,
+  RepositoriesMap,
+  RepositoriesBrowser,
+} from 'components'
 
 import repositoriesData from 'data/data-providers.yml'
 
@@ -22,10 +26,10 @@ const DataProvidersPage = () => (
 
     <Section id="map">
       <h2>{repositoriesData.map}</h2>
-      <RepositoryMap />
+      <RepositoriesMap />
     </Section>
 
-    <RepositoryBrowser endpoint="https://core.ac.uk/repositories/locations" />
+    <RepositoriesBrowser endpoint="https://core.ac.uk/repositories/locations" />
   </Article>
 )
 

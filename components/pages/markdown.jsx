@@ -1,5 +1,5 @@
 import React from 'react'
-import { Article, Content } from '../content'
+import { Article, Content } from '../layout'
 
 const MarkdownPage = ({ title, content, children }) => (
   <Article>

@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import { Collapse, Row, Col, Button, Card, CardBody } from 'reactstrap'
 import { bind } from 'decko'
-import { Article, Content, Section, Collapsed } from 'components'
-import TeamMember from 'components/team-member'
-import ContactForm from 'components/contact-form'
+import {
+  Article,
+  Content,
+  Section,
+  Collapsed,
+  TeamMember,
+  ContactForm,
+} from 'components'
 import aboutData from 'data/about.yml'
 import teamData from 'data/team.yml'
 
