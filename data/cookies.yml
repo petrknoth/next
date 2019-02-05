@@ -51,14 +51,11 @@ use:
 
       The following cookies are set by Google Analytics:
 
+    table: |
       *Google Analytics cookies*
 
       | Name   |      Purpose     |  Expires |
-      |----------|:-------------:|------:|
-      | _ga   |  This helps us count how many people visit the site by tracking if you've visited before
-
-      | Name   |      Purpose     |  Expires |
-      |----------|:-------------:|------:|
+      |----------|:-------------|------:|
       | _ga   |  This helps us count how many people visit the site by tracking if you've visited before                                                    | 2 years |
       | _utma |   Like _ga, this lets us know if you’ve visited before, so we can count how many of our visitors are new to the site or to a certain page   |   2 years |
       | _utmb | This works with _utmc to calculate the average length of time you spend on the site                                                         |    30 minutes |
@@ -72,10 +69,11 @@ use:
     description: |
       The system that runs our website sets cookies to allow it to run smoothly.
 
+    table: |
       *Website operation cookies*
 
       | Name   |      Purpose     |  Expires |
-      |----------|:-------------:|------:|
+      |----------|:-------------|------:|
       | PHP session cookie  |  To link you to a session in PHP, which is a way to store information to be used across multiple pages    |  When you log out or close your browser |
 
 
@@ -85,11 +83,11 @@ use:
     description: |
       Our system uses cookies to allow you to log into the site, and access restricted content and services.
 
-
+    table: |
       *Logged in access cookies*
 
       | Name   |      Purpose     |  Expires |
-      |----------|:-------------:|------:|
+      |----------|:-------------|------:|
       | Drupal.visitor.jisclogoff  |  To manipulate page cache once you log out    |  1 year |
 
       NB: Cookie guidance wording adapted from [gov.uk](http://www.gov.uk/help/cookies),

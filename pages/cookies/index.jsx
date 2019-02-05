@@ -27,12 +27,21 @@ const CookiesPage = () => (
         <Col xs="12" lg="9" tag="section">
           <h3>{cookiesData.use.title}</h3>
           <Content markdown>{cookiesData.use.description}</Content>
-          <Content markdown>{cookiesData.use.option1.title}</Content>
+          <Content markdown className="mt-5">
+            {cookiesData.use.option1.title}
+          </Content>
           <Content markdown>{cookiesData.use.option1.description}</Content>
-          <Content markdown>{cookiesData.use.option2.title}</Content>
+          <Content markdown>{cookiesData.use.option1.table}</Content>
+          <Content markdown className="mt-5">
+            {cookiesData.use.option2.title}
+          </Content>
           <Content markdown>{cookiesData.use.option2.description}</Content>
-          <Content markdown>{cookiesData.use.option3.title}</Content>
+          <Content markdown>{cookiesData.use.option2.table}</Content>
+          <Content markdown className="mt-5">
+            {cookiesData.use.option3.title}
+          </Content>
           <Content markdown>{cookiesData.use.option3.description}</Content>
+          <Content markdown>{cookiesData.use.option3.table}</Content>
         </Col>
       </Row>
     </Section>
