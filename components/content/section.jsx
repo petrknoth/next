@@ -1,5 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import { Container as BootstrapContainer } from 'reactstrap'
+import classNames from 'classnames'
+import Heading from '../heading'
 
 class Section extends Component {
   static isInheritedSection(TestComponent) {
@@ -51,11 +53,13 @@ class Section extends Component {
     return containerProp
   }
 
-  static containerize(children, containerProp) {
-    const Container = Section.getContainerComponent(containerProp)
+  static containerize(children, { container, level }) {
+    const Container = Section.getContainerComponent(container)
 
     let containerPull = []
     const containered = children.reduce((resultPull, child, i) => {
+      if (child == null) return resultPull
+
       const childKey =
         child.key ||
         child.props.id ||
@@ -73,7 +77,11 @@ class Section extends Component {
         }
 
         resultPull.push(
-          React.cloneElement(child, { key: childKey, container: Container })
+          React.cloneElement(child, {
+            key: childKey,
+            container: Container,
+            level: child.props.level || level + 1,
+          })
         )
       } else containerPull.push(React.cloneElement(child, { key: childKey }))
 
@@ -91,26 +99,43 @@ class Section extends Component {
     return containered
   }
 
+  renderHeading(level = this.props.level) {
+    const { heading, title } = this.props
+    const headingText = typeof heading == 'undefined' ? title : heading
+
+    return typeof headingText == 'string' ? (
+      <Heading level={level} className="section-title">
+        {headingText}
+      </Heading>
+    ) : (
+      headingText
+    )
+  }
+
   render() {
     const {
       children,
-      large = false,
-      small = false,
-      className = '',
+      className,
+      size,
+      level = 2,
       container = true,
       tag: Tag = 'section',
       ...restProps
     } = this.props
-    const classNames = [
+
+    const sectionClassNames = classNames(
       'section',
-      large ? 'section-lg' : '',
-      small ? 'section-sm' : '',
-      className,
-    ].join(' ')
+      size && `section-${size}`,
+      className
+    )
+
+    const heading = this.renderHeading(level)
+
+    const childList = [heading, ...React.Children.toArray(children)]
 
     return (
-      <Tag className={classNames} {...restProps}>
-        {Section.containerize(React.Children.toArray(children), container)}
+      <Tag className={sectionClassNames} {...restProps}>
+        {Section.containerize(childList, { container, level })}
       </Tag>
     )
   }
