@@ -2,6 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { Article, Content, Section } from 'components'
 import cookiesData from 'data/cookies.yml'
+import './cookies-page.scss'
 
 const CookiesPage = () => (
   <Article container nav tag="main">
@@ -10,14 +11,22 @@ const CookiesPage = () => (
     <Section id="cookie-setting" caption="Your cookie settings" tag="div">
       <Row>
         <Col xs="12" lg="9" tag="section">
-          <p className="h5">{cookiesData.settings.title}</p>
-          <Content markdown>{cookiesData.settings.description}</Content>
-          <Content markdown>{cookiesData.settings.option1.title}</Content>
-          <Content markdown>{cookiesData.settings.option1.description}</Content>
-          <Content markdown>{cookiesData.settings.option2.title}</Content>
-          <Content markdown>{cookiesData.settings.option2.description}</Content>
-          <Content markdown>{cookiesData.settings.option3.title}</Content>
-          <Content markdown>{cookiesData.settings.option3.description}</Content>
+          <div className="cookies-page">
+            <p className="h5">{cookiesData.settings.title}</p>
+            <Content markdown>{cookiesData.settings.description}</Content>
+            <Content markdown>{cookiesData.settings.option1.title}</Content>
+            <Content markdown>
+              {cookiesData.settings.option1.description}
+            </Content>
+            <Content markdown>{cookiesData.settings.option2.title}</Content>
+            <Content markdown>
+              {cookiesData.settings.option2.description}
+            </Content>
+            <Content markdown>{cookiesData.settings.option3.title}</Content>
+            <Content markdown>
+              {cookiesData.settings.option3.description}
+            </Content>
+          </div>
         </Col>
       </Row>
     </Section>
