@@ -81,7 +81,13 @@ const AboutPage = () => (
   <Article nav tag="main">
     <h1>{aboutData.title}</h1>
 
-    <Section id="our-mission" caption="Our mission" tag="div">
+    <Section
+      id="our-mission"
+      title={aboutData.mission.title}
+      navTitle="Our mission"
+      heading={null}
+      tag="div"
+    >
       <Row>
         <Col xs="12" sm="6" md="7" lg="8" tag="section">
           <h2>{aboutData.mission.title}</h2>
@@ -111,8 +117,11 @@ const AboutPage = () => (
       </Row>
     </Section>
 
-    <Section className="about-endorsements-section" id="endorsements">
-      <h2>{aboutData.endorsements.title}</h2>
+    <Section
+      className="about-endorsements-section"
+      id="endorsements"
+      title={aboutData.endorsements.title}
+    >
       <Content markdown>{aboutData.endorsements.content}</Content>
       <Link href="~about/endorsements" passHref>
         <Button color="primary" outline>

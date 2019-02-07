@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import { Container as BootstrapContainer } from 'reactstrap'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import Heading from '../heading'
 
@@ -99,29 +100,49 @@ class Section extends Component {
     return containered
   }
 
-  renderHeading(level = this.props.level) {
-    const { heading, title } = this.props
-    const headingText = typeof heading == 'undefined' ? title : heading
+  static propTypes = {
+    title: PropTypes.node,
+    navTitle: PropTypes.node,
+    heading: PropTypes.element,
+    size: PropTypes.PropTypes.oneOf(['', 'sm', 'md', 'lg']),
+    level: Heading.propTypes.level,
+    container: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]),
+  }
 
-    return typeof headingText == 'string' ? (
-      <Heading level={level} className="section-title">
-        {headingText}
-      </Heading>
-    ) : (
-      headingText
-    )
+  static defaultProps = {
+    title: null,
+    navTitle: null,
+    heading: Heading,
+    size: '',
+    level: 2,
+    container: true,
+  }
+
+  renderHeading(props) {
+    const { title, heading: SectionHeading } = this.props
+    if (SectionHeading)
+      return <SectionHeading {...props}>{title}</SectionHeading>
+    return null
   }
 
   render() {
     const {
+      title,
+      navTitle,
+      heading,
       children,
       className,
       size,
-      level = 2,
-      container = true,
-      tag: Tag = 'section',
+      level,
+      container,
+      tag: Tag,
       ...restProps
     } = this.props
+
+    const headingNode = this.renderHeading({
+      level,
+      className: 'section-title',
+    })
 
     const sectionClassNames = classNames(
       'section',
@@ -129,9 +150,8 @@ class Section extends Component {
       className
     )
 
-    const heading = this.renderHeading(level)
-
-    const childList = [heading, ...React.Children.toArray(children)]
+    // const childList = [headingNode, ...React.Children.toArray(children)]
+    const childList = [headingNode, ...React.Children.toArray(children)]
 
     return (
       <Tag className={sectionClassNames} {...restProps}>
