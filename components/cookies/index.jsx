@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   CustomInput,
   Form,
@@ -12,7 +12,7 @@ import {
 import Link from '../link'
 import './cookies.scss'
 
-class Cookies extends React.Component {
+class Cookies extends Component {
   constructor(props) {
     super(props)
     this.applyCookies = this.applyCookies.bind(this)
@@ -26,12 +26,19 @@ class Cookies extends React.Component {
   render() {
     const action = () => console.log('Form action performed')
     const method = 'POST'
-    const onSubmit = () => console.log('Submit button pressed')
+    const onSubmit = e => {
+      e.preventDefault()
+      console.log('Submit button pressed - onSubmit() - cookies component')
+      const x = document.getElementById('cookies-settings')
+      if (x.classList.contains('cookies-settings'))
+        x.classList.add('cookies-settings-hide')
+      else console.log('there are no cookies-settings class')
+    }
 
     if (!this.props) return null
     return (
       <Form action={action} method={method} onSubmit={onSubmit}>
-        <Card className="slideInUp cookies-settings">
+        <Card id="cookies-settings" className="slideInUp cookies-settings">
           <CardHeader className="cookies-header">Cookie settings</CardHeader>
           <CardBody>
             <FormGroup>

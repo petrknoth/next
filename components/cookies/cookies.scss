@@ -23,6 +23,10 @@
   }
 }
 
+.cookies-settings-hide {
+  display: none;
+}
+
 .cookies-header {
   font-size: $lead-font-size;
 }
@@ -37,6 +41,7 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 @keyframes slideInUp {
   0% {
     -webkit-transform: translateY(100%);
