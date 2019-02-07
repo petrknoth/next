@@ -9,19 +9,19 @@ settings:
       ***Essential cookies***
     description: |
       **Required** to make the site work, and to save your other cookie settings. <br />
-      [Learn more](https://www.google.com/)
+      [Learn more](#use-cookies)
   option2:
     title: |
       ***Enchanced cookies***
     description: |
       Let the site remember your choices, making tasks a little bit easier each time. <br />
-      [Learn more](https://www.google.com/)
+      [Learn more](#use-cookies)
   option3:
     title: |
       ***Analytics***
     description: |
       Let us (anonymously) track site usage, so that we can measure performance and make improovements. <br />
-      [Learn more](https://www.google.com/)
+      [Learn more](#use-cookies)
 
 
 use:
