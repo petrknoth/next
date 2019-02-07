@@ -18,7 +18,10 @@ class CookiesPage extends React.Component {
   render() {
     const action = () => console.log('Form action performed')
     const method = 'POST'
-    const onSubmit = () => console.log('Submit button pressed')
+    const onSubmit = e => {
+      e.preventDefault()
+      console.log('Submit button pressed onSubmit() - cookies page')
+    }
 
     if (!this.props) return null
     return (
