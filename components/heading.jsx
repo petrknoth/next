@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 const Heading = ({ level = 1, children, className, tag, ...restProps }) => {
@@ -15,6 +16,10 @@ const Heading = ({ level = 1, children, className, tag, ...restProps }) => {
       {children}
     </Tag>
   )
+}
+
+Heading.propTypes = {
+  level: PropTypes.number.isRequired,
 }
 
 export default Heading
