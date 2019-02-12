@@ -4,23 +4,18 @@ import { Nav, NavItem, NavLink } from 'reactstrap'
 
 import Section from './section'
 
-const ArticleNav = ({ items }) => {
-  if (items == null || items.length === 0) return null
-
-  return (
-    <Nav className="article-nav">
-      {items.map(({ text, href }) => (
-        <NavItem key={href}>
-          <NavLink href={href}>{text}</NavLink>
-        </NavItem>
-      ))}
-    </Nav>
-  )
-}
+const ArticleNav = ({ items }) => (
+  <Nav className="article-nav">
+    {items.map(({ text, href }) => (
+      <NavItem key={href}>
+        <NavLink href={href}>{text}</NavLink>
+      </NavItem>
+    ))}
+  </Nav>
+)
 
 class Article extends Section {
   static propTypes = {
-    title: PropTypes.node.isRequired,
     tag: PropTypes.node,
     nav: PropTypes.bool,
     container: PropTypes.bool,
@@ -33,52 +28,63 @@ class Article extends Section {
   }
 
   state = {
+    header: null,
+    content: null,
     navItems: [],
   }
 
   static getDerivedStateFromProps({ children }, state) {
     const navItems = React.Children.map(children, child => {
-      if (child == null || !Section.isSection(child.type)) return null
+      if (child == null || !Section.isSection(child.type) || !child.props.id)
+        return null
 
-      const { title, id } = child.props
-      return title && id ? { text: title, href: `#${id}` } : null
+      const { caption, id } = child.props
+      return { text: caption, href: `#${id}` }
+    })
+
+    const header = []
+    const content = []
+    React.Children.forEach(children, child => {
+      if (!child) return
+      if (typeof child.type == 'string' && child.type.match(/header|h[1-6]/))
+        header.push(child)
+      else content.push(React.cloneElement(child, { caption: undefined }))
     })
 
     return {
       ...state,
+      header,
+      content,
       navItems,
     }
   }
 
-  renderNav() {
-    return <ArticleNav items={this.state.navItems} />
-  }
-
   renderHeader() {
-    const { container, level = 1 } = this.props
+    const { nav, container } = this.props
+    const { header, navItems } = this.state
 
-    const heading = this.renderHeading(level)
-    const navigation = this.renderNav()
-
-    if (!heading && !navigation) return null
+    if (header.length === 0 && (!nav || navItems.length === 0)) return null
 
     const Container = Section.getContainerComponent(container)
 
     return (
       <Container>
-        {heading}
-        {navigation}
+        {header}
+        {nav && <ArticleNav items={navItems} />}
       </Container>
     )
   }
 
   renderContent() {
-    const { children, container } = this.props
-    return Section.containerize(React.Children.toArray(children), { container })
+    const { container } = this.props
+    const { content } = this.state
+    const Container = Section.getContainerComponent(container)
+
+    return Section.containerize(content, Container)
   }
 
   render() {
-    const { className, tag: Tag, container, ...restProps } = this.props
+    const { nav, className, tag: Tag, container, ...restProps } = this.props
 
     return (
       <Tag className={`article ${className || ''}`} {...restProps}>

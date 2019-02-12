@@ -1,8 +1,5 @@
 import React, { Fragment, Component } from 'react'
 import { Container as BootstrapContainer } from 'reactstrap'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import Heading from '../heading'
 
 class Section extends Component {
   static isInheritedSection(TestComponent) {
@@ -54,13 +51,11 @@ class Section extends Component {
     return containerProp
   }
 
-  static containerize(children, { container, level }) {
-    const Container = Section.getContainerComponent(container)
+  static containerize(children, containerProp) {
+    const Container = Section.getContainerComponent(containerProp)
 
     let containerPull = []
     const containered = children.reduce((resultPull, child, i) => {
-      if (child == null) return resultPull
-
       const childKey =
         child.key ||
         child.props.id ||
@@ -78,11 +73,7 @@ class Section extends Component {
         }
 
         resultPull.push(
-          React.cloneElement(child, {
-            key: childKey,
-            container: Container,
-            level: child.props.level || level + 1,
-          })
+          React.cloneElement(child, { key: childKey, container: Container })
         )
       } else containerPull.push(React.cloneElement(child, { key: childKey }))
 
@@ -100,62 +91,26 @@ class Section extends Component {
     return containered
   }
 
-  static propTypes = {
-    title: PropTypes.node,
-    navTitle: PropTypes.node,
-    heading: PropTypes.element,
-    size: PropTypes.PropTypes.oneOf(['', 'sm', 'md', 'lg']),
-    level: Heading.propTypes.level,
-    container: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]),
-  }
-
-  static defaultProps = {
-    title: null,
-    navTitle: null,
-    heading: Heading,
-    size: '',
-    level: 2,
-    container: true,
-  }
-
-  renderHeading(props) {
-    const { title, heading: SectionHeading } = this.props
-    if (SectionHeading)
-      return <SectionHeading {...props}>{title}</SectionHeading>
-    return null
-  }
-
   render() {
     const {
-      title,
-      navTitle,
-      heading,
       children,
-      className,
-      size,
-      level,
-      container,
-      tag: Tag,
+      large = false,
+      small = false,
+      className = '',
+      container = true,
+      tag: Tag = 'section',
       ...restProps
     } = this.props
-
-    const headingNode = this.renderHeading({
-      level,
-      className: 'section-title',
-    })
-
-    const sectionClassNames = classNames(
+    const classNames = [
       'section',
-      size && `section-${size}`,
-      className
-    )
-
-    // const childList = [headingNode, ...React.Children.toArray(children)]
-    const childList = [headingNode, ...React.Children.toArray(children)]
+      large ? 'section-lg' : '',
+      small ? 'section-sm' : '',
+      className,
+    ].join(' ')
 
     return (
-      <Tag className={sectionClassNames} {...restProps}>
-        {Section.containerize(childList, { container, level })}
+      <Tag className={classNames} {...restProps}>
+        {Section.containerize(React.Children.toArray(children), container)}
       </Tag>
     )
   }
