@@ -10,13 +10,30 @@ class CookiesPage extends React.Component {
     this.applyCookie = this.applyCookie.bind(this)
   }
 
-  showCookie() {
-    console.log(document.cookie)
+  getCookie(name) {
     this.props = false
+    const v = document.cookie.match(`(^|;) ?${name}=([^;]*)(;|$)`)
+    return v ? v[2] : null
+  }
+
+  setCookie(name, value, days) {
+    this.props = false
+    const d = new Date()
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days)
+    document.cookie = `${name}=${value};path=/;expires=${d.toGMTString()}`
+  }
+
+  deleteCookie(name) {
+    this.setCookie(name, '', -1)
   }
 
   applyCookie() {
     console.log('apply cookies & close tab')
+    this.props = false
+  }
+
+  showCookie() {
+    console.log(document.cookie)
     this.props = false
   }
 
