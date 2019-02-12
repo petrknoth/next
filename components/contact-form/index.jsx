@@ -24,8 +24,13 @@ const ContactForm = ({
         Subject:
       </Label>
       <Col sm="9">
-        <Input type="select" name="subject" id="contact-form-subject">
-          <option disabled selected>
+        <Input
+          type="select"
+          name="subject"
+          defaultValue=""
+          id="contact-form-subject"
+        >
+          <option disabled value="">
             Please choose a subject
           </option>
           {subjects.map(({ value, label }) => (
