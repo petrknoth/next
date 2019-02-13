@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'reactstrap'
-import { Section, Content } from '../content'
+import { Content } from '../content'
+import { Section } from '../layout'
 import Link from '../link'
 
 const renderSections = (sections, Component) =>

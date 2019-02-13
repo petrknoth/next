@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import classNames from 'classnames'
 
 import Head from './head'
 
@@ -7,13 +8,22 @@ import Footer from '../footer'
 
 import './layout.scss'
 
-const Layout = ({ title, description, navigation, footer, children }) => (
-  <Fragment>
+const Layout = ({
+  title,
+  description,
+  navigation,
+  footer,
+  children,
+  className,
+  tag: Tag = 'div',
+  ...restProps
+}) => (
+  <Tag className={classNames('page', className)} {...restProps}>
     <Head title={title} description={description} />
     <Header className="page-header" siteMap={navigation} />
     {children}
     <Footer className="page-footer" {...footer} />
-  </Fragment>
+  </Tag>
 )
 
 export default Layout

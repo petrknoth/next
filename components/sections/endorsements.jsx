@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col, Button } from 'reactstrap'
-import { Section, Content } from '../content'
+import { Content } from '../content'
+import { Section } from '../layout'
 import LogosCarousel from '../logos-carousel'
 import TestimonialsCarousel from '../testimonials-carousel'
 import Link from '../link'

@@ -57,8 +57,9 @@ export const containerize = (elements, { container: Container, level }) => {
       `${element.type.name || element.type.toString()}-${i}`
 
     const isContainerable = getCompositionChain(element).some(
-      Component => Component.propTypes.container
+      Component => Component.propTypes && Component.propTypes.container
     )
+    if (!isContainerable) console.log(getCompositionChain(element))
 
     if (isContainerable) {
       if (containerList.length > 0) {

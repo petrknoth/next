@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'reactstrap'
-import { Content, Section } from '../content'
+import { Content } from '../content'
+import { Section } from '../layout'
 import Link from '../link'
 
 import './join.scss'

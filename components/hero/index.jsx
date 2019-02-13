@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../logo'
-import { Section } from '../content'
+import { Section } from '../layout'
 
 import './hero.scss'
 
