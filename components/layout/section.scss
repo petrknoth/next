@@ -1,0 +1,41 @@
+@import "../bootstrap/core";
+
+$section-sm-spacer: 2 * $spacer !default;
+$section-md-spacer: 4 * $spacer !default;
+$section-lg-spacer: 8 * $spacer !default;
+$section-spacer: $section-md-spacer !default;
+
+.section {
+  padding-top: $section-spacer;
+  padding-bottom: $section-spacer;
+
+  > .section {
+    padding-top: $section-sm-spacer;
+    padding-bottom: $section-sm-spacer;
+
+    &:last-child {
+      padding-bottom: $section-spacer;
+      margin-bottom: -$section-spacer;
+    }
+  }
+}
+
+.section-sm {
+  padding-top: $section-sm-spacer;
+  padding-bottom: $section-sm-spacer;
+
+  > .section:last-child {
+    padding-bottom: $section-sm-spacer;
+    margin-bottom: -$section-sm-spacer;
+  }
+}
+
+.section-lg {
+  padding-top: $section-lg-spacer;
+  padding-bottom: $section-lg-spacer;
+
+  > .section:last-child {
+    padding-bottom: $section-lg-spacer;
+    margin-bottom: -$section-lg-spacer;
+  }
+}

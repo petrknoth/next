@@ -1,2 +1,6 @@
 export { default } from './layout'
 export { default as Document } from './document'
+export { default as Head } from './head'
+export { default as Main } from './main'
+export { default as Page } from './page'
+export { default as Section } from './section'
