@@ -1,16 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Button } from 'reactstrap'
 import { bind } from 'decko'
 
-import {
-  Hero,
-  KeyFeature,
-  KeyFeatureList,
-  Switcher,
-  Content,
-  Section,
-  Article,
-} from 'components'
+import { Hero, KeyFeature, KeyFeatureList, Switcher, Content } from 'components'
+import { Page, Section } from 'components/layout'
 import { JoinSection } from 'components/sections'
 import SearchForm from 'components/search'
 import Link from 'components/link'
@@ -46,7 +39,7 @@ const TestimonialsSwitcher = ({ items, limit, ...restProps }) => (
   </Switcher>
 )
 
-class TestimonialsSection extends Section {
+class TestimonialsSection extends Component {
   state = { itemHash: '' }
 
   @bind
@@ -89,7 +82,7 @@ class TestimonialsSection extends Section {
 }
 
 const IndexPage = () => (
-  <Article tag="main">
+  <Page title={page.title} heading={null}>
     <Hero headline={page.hero.headline} tagline={page.hero.tagline}>
       <Section tag="div">
         <SearchForm placeholder="Search over 100,000,000 articles" />
@@ -142,7 +135,7 @@ const IndexPage = () => (
         items={extractTestimonials(pageSections.partners.organizations.items)}
       />
     </Section>
-  </Article>
+  </Page>
 )
 
 export default IndexPage

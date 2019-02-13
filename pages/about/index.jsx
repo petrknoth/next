@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Collapse, Row, Col, Card, CardBody } from 'reactstrap'
 import { bind } from 'decko'
-import { Article, Content, Section, Collapsed, Button } from 'components'
+import { Content, Collapsed, Button } from 'components'
+import { Page, Section } from 'components/layout'
 import Link from 'components/link'
 import TeamMember from 'components/team-member'
 import ContactForm from 'components/contact-form'
@@ -78,13 +79,11 @@ const Video = ({ src, title, className = '', tag: Tag = 'div' }) => (
 )
 
 const AboutPage = () => (
-  <Article nav tag="main">
-    <h1>{aboutData.title}</h1>
-
+  <Page title={aboutData.title} description={aboutData.description}>
     <Section
       id="our-mission"
-      title={aboutData.mission.title}
-      navTitle="Our mission"
+      headline={aboutData.mission.title}
+      caption="Our mission"
       heading={null}
       tag="div"
     >
@@ -130,10 +129,8 @@ const AboutPage = () => (
       </Link>
     </Section>
 
-    <Section id="how-it-works" caption="How it works">
-      <h2>{aboutData.howItWorks.title}</h2>
-      <Section>
-        <h3>{aboutData.howItWorks.harvesting.title}</h3>
+    <Section id="how-it-works" title={aboutData.howItWorks.title}>
+      <Section title={aboutData.howItWorks.harvesting.title}>
         <Row>
           <Col xs="12" md="6">
             <Content markdown>
@@ -161,101 +158,87 @@ const AboutPage = () => (
         </Row>
       </Section>
 
-      <Section className="about-services-section" id="section">
-        <Row>
-          <Col md="9">
-            <h3>{aboutData.howItWorks.services.title}</h3>
-            <Content markdown>{aboutData.howItWorks.services.content}</Content>
+      <Section
+        className="about-services-section"
+        id="services"
+        title={aboutData.howItWorks.services.title}
+      >
+        <Content markdown>{aboutData.howItWorks.services.content}</Content>
 
-            <Row className="align-items-center mt-3">
-              <Col xs="6" className="text-right">
-                <a className="btn btn-link" href="~services">
-                  Explore our services
-                </a>
-              </Col>
+        <Row className="align-items-center mt-3">
+          <Col xs="6" className="text-right">
+            <a className="btn btn-link" href="~services">
+              Explore our services
+            </a>
+          </Col>
 
-              <Col xs="6">
-                <Link href="~join" passHref>
-                  <Button color="primary">
-                    {aboutData.howItWorks.joinButton}
-                  </Button>
-                </Link>
-              </Col>
-            </Row>
+          <Col xs="6">
+            <Link href="~join" passHref>
+              <Button color="primary">{aboutData.howItWorks.joinButton}</Button>
+            </Link>
           </Col>
         </Row>
       </Section>
     </Section>
 
-    <Section id="contact" caption="Contact us">
-      <Row>
-        <Col md="9">
-          <h2>{aboutData.contacts.title}</h2>
-          <ContactFormCard />
-          <Row className="py-3">
-            <Col md="3" className="font-weight-bold">
-              {aboutData.contacts.address.caption}
-            </Col>
+    <Section id="contact" title={aboutData.contacts.title}>
+      <ContactFormCard />
+      <Row className="py-3">
+        <Col md="3" className="font-weight-bold">
+          {aboutData.contacts.address.caption}
+        </Col>
 
-            <Col md="9">
-              <address>
-                {aboutData.contacts.address.name}
-                <br />
-                {aboutData.contacts.address.org}
-                <br />
-                {aboutData.contacts.address.city}
-                <br />
-                {aboutData.contacts.address.country}
-              </address>
-            </Col>
-          </Row>
+        <Col md="9">
+          <address>
+            {aboutData.contacts.address.name}
+            <br />
+            {aboutData.contacts.address.org}
+            <br />
+            {aboutData.contacts.address.city}
+            <br />
+            {aboutData.contacts.address.country}
+          </address>
         </Col>
       </Row>
     </Section>
 
-    <Section id="resources" caption="Resources">
-      <h2>{aboutData.resources.title}</h2>
+    <Section id="resources" title={aboutData.resources.title}>
       <Content markdown>{aboutData.resources.content}</Content>
     </Section>
 
-    <Section id="team" caption="The team">
-      <Row>
-        <Col md="9">
-          <h2>{teamData.title}</h2>
-          <Collapsed
-            id="current-members"
-            title="Current members of the CORE team"
-            open
-          >
-            <ul className="list-unstyled">
-              {teamData.members.map(({ name, role, picture }) => (
-                <TeamMember
-                  key={`${name}, ${role}`}
-                  name={name}
-                  role={role}
-                  picture={picture ? `/static/images/team/${picture}` : null}
-                  tag="li"
-                />
-              ))}
-            </ul>
-          </Collapsed>
-          <Collapsed id="past-members" title="Past members of the CORE team">
-            <ul className="list-unstyled">
-              {teamData.pastMembers.map(({ name, role, picture }) => (
-                <TeamMember
-                  key={`${name}, ${role}`}
-                  name={name}
-                  role={role}
-                  picture={picture ? `/static/images/team/${picture}` : null}
-                  tag="li"
-                />
-              ))}
-            </ul>
-          </Collapsed>
-        </Col>
-      </Row>
+    <Section id="team" title={teamData.title}>
+      <Collapsed
+        id="current-members"
+        title="Current members of the CORE team"
+        open
+      >
+        <ul className="list-unstyled">
+          {teamData.members.map(({ name, role, picture }) => (
+            <TeamMember
+              key={`${name}, ${role}`}
+              name={name}
+              role={role}
+              picture={picture ? `/static/images/team/${picture}` : null}
+              tag="li"
+            />
+          ))}
+        </ul>
+      </Collapsed>
+      <Collapsed id="past-members" title="Past members of the CORE team">
+        <ul className="list-unstyled">
+          {teamData.pastMembers.map(({ name, role, picture }) => (
+            <TeamMember
+              key={`${name}, ${role}`}
+              name={name}
+              role={role}
+              picture={picture ? `/static/images/team/${picture}` : null}
+              tag="li"
+            />
+          ))}
+        </ul>
+      </Collapsed>
     </Section>
-  </Article>
+  </Page>
 )
 
 export default AboutPage
