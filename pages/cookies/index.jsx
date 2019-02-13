@@ -51,11 +51,6 @@ class CookiesPage extends React.Component {
       this.showCookie()
       console.log('Submit button pressed onSubmit() - cookies page')
     }
-    const onCancel = e => {
-      e.preventDefault()
-      this.clearCookie()
-      console.log('Cancel button pressed onCancel() - cookies page')
-    }
 
     if (!this.props) return null
     return (
@@ -143,17 +138,6 @@ class CookiesPage extends React.Component {
                               type="button"
                             >
                               Save
-                            </Button>
-                            <Button
-                              id="clear-cookies-btn4"
-                              title="Clear cookies"
-                              onClick={onCancel}
-                              color="primary"
-                              type="button"
-                              outline
-                              className="ml-2"
-                            >
-                              Cancel
                             </Button>
                           </div>
                         </FormGroup>
