@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import NextApp, { Container as NextContainer } from 'next/app'
 import Layout from 'components/layout'
 import config from 'data/core.yml'
@@ -23,6 +23,7 @@ class App extends NextApp {
           description={config.description}
           navigation={config.navigation}
           footer={config.footer}
+          tag={Fragment}
         >
           <Component {...pageProps} />
         </Layout>

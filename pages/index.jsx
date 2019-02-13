@@ -82,7 +82,7 @@ class TestimonialsSection extends Component {
 }
 
 const IndexPage = () => (
-  <Page title={page.title} heading={null}>
+  <Page title={page.title} headline={null}>
     <Hero headline={page.hero.headline} tagline={page.hero.tagline}>
       <Section tag="div">
         <SearchForm placeholder="Search over 100,000,000 articles" />
