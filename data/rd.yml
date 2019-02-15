@@ -1,0 +1,34 @@
+title: CORE Repository Dashboard
+
+sections:
+-
+  id:
+  title:
+  propositiontitle: Short value proposition about this long
+  propositionscreenshot: /static/images/map.png
+  propositiondescription: |
+      Description of screenshot, which may a [link](https://youtu.be/t_Kd_G7p6ZQ).
+
+-
+  id: whats-included
+  title: What is included
+  includedtitle: Our free membership provides you with ...
+  includeddescription: |
+    * Lorem ipum sjsjsj f f j w dewjelkjwfejf wekjfnbwjfbeorwnforw
+    * Lorem ipum sjsjsj f f j w dewjelkjwfejf wekjfnbwjfbeorwnforw
+
+    Dduhiuhuhuh ijoijoijoijoij hohoihoihopijih oijoijoijoijoi huhouhu fvjhnknkjnkjnjk
+    regtkkn hjbnikjnkjn iygihjomp pokpjpokpopok ohohoho ughoihoroi rjono oijoi
+    [Link](https://www.google.com/)
+  includedbutton: ~services/api
+  includedcaption: Read more
+
+
+-
+  id: premium-features
+  title: Premium features
+
+
+-
+  id: documentation
+  title: Documentation
