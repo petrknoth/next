@@ -12,52 +12,52 @@ const RdPage = () => (
     <h1>{rdData.title}</h1>
     <Section caption={rdData.short.subtitle}>
       <p className="h4 text-center">{rdData.short.subtitle}</p>
-      <figure className="d-flex align-items-center justify-content-center">
+      <figcaption className="d-flex align-items-center justify-content-center">
         <img
           className="img-fluid"
           src={rdData.short.screenshot}
           alt={`${rdData.short.subtitle}'s screenshot`}
         />
-      </figure>
+      </figcaption>
       <Content className="text-center" markdown>
         {rdData.short.caption}
       </Content>
 
       <Row className="pt-5">
         <Col xs="12" md="4">
-          <figure className="d-flex align-items-center justify-content-center service-section-logo">
+          <figcaption className="d-flex align-items-center justify-content-center service-section-logo">
             <img
               className="img-fluid"
               src={rdData.short.logo1}
               alt={`${rdData.short.logo1}'s logo`}
             />
-          </figure>
+          </figcaption>
           <span className="h6 text-center d-block">
             {rdData.short.caption1}
           </span>
         </Col>
 
         <Col xs="12" md="4">
-          <figure className="d-flex align-items-center justify-content-center service-section-logo">
+          <figcaption className="d-flex align-items-center justify-content-center service-section-logo">
             <img
               className="img-fluid"
               src={rdData.short.logo2}
               alt={`${rdData.short.logo2}'s logo`}
             />
-          </figure>
+          </figcaption>
           <span className="h6 text-center d-block">
             {rdData.short.caption2}
           </span>
         </Col>
 
         <Col xs="12" md="4">
-          <figure className="d-flex align-items-center justify-content-center service-section-logo">
+          <figcaption className="d-flex align-items-center justify-content-center service-section-logo">
             <img
               className="img-fluid"
               src={rdData.short.logo3}
               alt={`${rdData.short.logo3}'s logo`}
             />
-          </figure>
+          </figcaption>
           <span className="h6 text-center d-block">
             {rdData.short.caption3}
           </span>
