@@ -1,60 +1,66 @@
 title: CORE Repository Dashboard
 
-short:
-  title:
-  subtitle: Short value proposition about this long
-  screenshot: /static/images/screenshot.png
+tagline: Short value proposition about this long
+screenshot:
+  source: /static/images/screenshot.png
   caption: |
     Description of screenshot, which may a [link](https://youtu.be/t_Kd_G7p6ZQ).
-  logo1: /static/images/logo.png
-  caption1: |
-    Key Message 1
-  logo2: /static/images/logo.png
-  caption2: |
-    Key Message 2
-  logo3: /static/images/logo.png
-  caption3: |
-    Key Message 3
-  description: |
+
+features:
+-
+  title: Key message 1
+  picture: /static/images/logo.png
+-
+  title: Key message 2
+  picture: /static/images/logo.png
+-
+  title: Key message 3
+  picture: /static/images/logo.png
+
+description: |
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type
+  specimen book. It has survived not only five centuries, but also the leap into
+  electronic typesetting, remaining essentially unchanged. It was popularised in
+  the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+  and more recently with desktop publishing software like Aldus PageMaker
+  including versions of Lorem Ipsum.
+
+  [Looking for documentation?](https://youtu.be/t_Kd_G7p6ZQ)
+
+testimonial:
+  content: |
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
     when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book. It has survived not only five centuries, but also the leap into
-    electronic typesetting, remaining essentially unchanged. It was popularised in
-    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker
-    including versions of Lorem Ipsum.
-
-     [Looking for documentation?](https://youtu.be/t_Kd_G7p6ZQ)
-
-  testimonial:
-    content: |
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type
-      specimen book.
-    author:
-      name: Author
-      role: Role at Company
-      picture: /static/images/logo.png
+    specimen book.
+  author:
+    name: Author
+    role: Role at Company
+    picture: /static/images/logo.png
 
 package:
   title: What is included
-  subtitle: Our free membership provides you with ...
+  subtitle:
   description: |
-    * Lorem ipum sjsjsj  up for this service you'll get access to our ent
-    sdfijlohuvre dewjelkjwfejf wekjfnbwjfbeorwnforw
+    Our free membership provides you with ...
 
+    * Lorem ipum sjsjsj  up for this service you'll get access to our ent
+      sdfijlohuvre dewjelkjwfejf wekjfnbwjfbeorwnforw
     * Lorem ipum sergrebgeerwi grwegerger fefwfkjoh oiygiuyfutf
-    sj ffffff f j w dewjelkjwfejf lhliytuyg iyturtuy uwekjfnbwjfbeorwnforw
+      sj ffffff f j w dewjelkjwfejf lhliytuyg iyturtuy uwekjfnbwjfbeorwnforw
 
     By signing up for this service you'll get access to our entire [free package](/services),
     giving you access to other services like [Service](/services),  [Service](/services),
     [Service](/services), and [more](/services)
-  button1: ~services/api
-  caption1: Read more about our free package
-  button2: ~about#contact
-  caption2: Sign up
+  actions:
+    primary:
+      url: ~join
+      caption: Sign up
+    secondary:
+      url: ~packages/free
+      caption: Read more about our free package
 
 premium:
   title: Premium features
@@ -68,10 +74,13 @@ premium:
     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
     and more recently with desktop publishing software like Aldus PageMaker
     including versions of Lorem Ipsum.
-  button1: ~services/api
-  caption1: Read more about our free package
-  button2: ~about#contact
-  caption2: Join CORE
+  actions:
+    primary:
+      url: ~join
+      caption: Sign up
+    secondary:
+      url: ~packages/free
+      caption: Read more about our free package
 
 documentation:
   title: Documentation
@@ -85,7 +94,10 @@ documentation:
     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
     and more recently with desktop publishing software like Aldus PageMaker
     including versions of Lorem Ipsum.
-  button1: ~services/api
-  caption1: Read more about documentation
-  button2: ~services/api
-  caption2: Read more
+  actions:
+    primary:
+      url: ~join
+      caption: Sign up
+    secondary:
+      url: ~packages/free
+      caption: Read more about our free package
