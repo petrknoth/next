@@ -77,7 +77,7 @@ const RdPage = () => (
       id={rdData.included.title}
     >
       <h2>{rdData.included.title}</h2>
-      <h4 className="h4 ">{rdData.included.subtitle}</h4>
+      <p className="h4 ">{rdData.included.subtitle}</p>
       <Content markdown>{rdData.included.description}</Content>
       <div className="text-center">
         <Button color="primary" outline href={rdData.included.button1}>
@@ -95,7 +95,7 @@ const RdPage = () => (
       id={rdData.premium.title}
     >
       <h2>{rdData.premium.title}</h2>
-      <h4 className="h4 ">{rdData.premium.subtitle}</h4>
+      <p className="h4 ">{rdData.premium.subtitle}</p>
       <Content markdown>{rdData.premium.description}</Content>
       <div className="text-center">
         <Button color="primary" outline href={rdData.premium.button1}>
@@ -113,7 +113,7 @@ const RdPage = () => (
       id={rdData.documentation.title}
     >
       <h2>{rdData.documentation.title}</h2>
-      <h4 className="h4 ">{rdData.documentation.subtitle}</h4>
+      <p className="h4 ">{rdData.documentation.subtitle}</p>
       <Content markdown>{rdData.documentation.description}</Content>
       <div className="text-center">
         <Button color="primary" outline href={rdData.documentation.button1}>
