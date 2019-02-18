@@ -4,8 +4,39 @@ short:
   title:
   subtitle: Short value proposition about this long
   screenshot: /static/images/screenshot.png
-  description: |
+  caption: |
     Description of screenshot, which may a [link](https://youtu.be/t_Kd_G7p6ZQ).
+  logo1: /static/images/logo.png
+  caption1: |
+    Key Message 1
+  logo2: /static/images/logo.png
+  caption2: |
+    Key Message 2
+  logo3: /static/images/logo.png
+  caption3: |
+    Key Message 3
+  description: |
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries, but also the leap into
+    electronic typesetting, remaining essentially unchanged. It was popularised in
+    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.
+
+     [Looking for documentation?](https://youtu.be/t_Kd_G7p6ZQ)
+
+  testimonial:
+    content: |
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book.
+    author:
+      name: Author
+      role: Role at Company
+      picture: /static/images/logo.png
 
 included:
   title: What is included

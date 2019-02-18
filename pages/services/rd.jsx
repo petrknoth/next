@@ -2,6 +2,11 @@ import React from 'react'
 import { Article, Content, Section, Button } from 'components'
 import rdData from 'data/rd.yml'
 
+import { Row, Col } from 'reactstrap'
+
+import './services.scss'
+import Testimonial from '../../components/testimonial'
+
 const RdPage = () => (
   <Article nav>
     <h1>{rdData.title}</h1>
@@ -15,8 +20,55 @@ const RdPage = () => (
         />
       </figure>
       <Content className="text-center" markdown>
+        {rdData.short.dcaption}
+      </Content>
+
+      <Row className="pt-5">
+        <Col xs="12" md="4">
+          <figure className="d-flex align-items-center justify-content-center service-section-logo">
+            <img
+              className="img-fluid"
+              src={rdData.short.logo1}
+              alt={`${rdData.short.logo1}'s logo`}
+            />
+          </figure>
+          <span className="h6 text-center d-block">
+            {rdData.short.caption1}
+          </span>
+        </Col>
+
+        <Col xs="12" md="4">
+          <figure className="d-flex align-items-center justify-content-center service-section-logo">
+            <img
+              className="img-fluid"
+              src={rdData.short.logo2}
+              alt={`${rdData.short.logo2}'s logo`}
+            />
+          </figure>
+          <span className="h6 text-center d-block">
+            {rdData.short.caption2}
+          </span>
+        </Col>
+
+        <Col xs="12" md="4">
+          <figure className="d-flex align-items-center justify-content-center service-section-logo">
+            <img
+              className="img-fluid"
+              src={rdData.short.logo3}
+              alt={`${rdData.short.logo3}'s logo`}
+            />
+          </figure>
+          <span className="h6 text-center d-block">
+            {rdData.short.caption3}
+          </span>
+        </Col>
+      </Row>
+
+      <Content className="py-5" markdown>
         {rdData.short.description}
       </Content>
+
+      <Testimonial {...rdData.short.testimonial} />
     </Section>
 
     <Section
