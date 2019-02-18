@@ -20,7 +20,7 @@ const RdPage = () => (
         />
       </figure>
       <Content className="text-center" markdown>
-        {rdData.short.dcaption}
+        {rdData.short.caption}
       </Content>
 
       <Row className="pt-5">
