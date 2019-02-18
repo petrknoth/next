@@ -11,7 +11,7 @@ const RdPage = () => (
   <Article nav>
     <h1>{rdData.title}</h1>
     <Section caption={rdData.short.subtitle}>
-      <h4 className="h4 text-center">{rdData.short.subtitle}</h4>
+      <p className="h4 text-center">{rdData.short.subtitle}</p>
       <figure className="d-flex align-items-center justify-content-center">
         <img
           className="img-fluid"
