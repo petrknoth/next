@@ -38,7 +38,7 @@ short:
       role: Role at Company
       picture: /static/images/logo.png
 
-included:
+package:
   title: What is included
   subtitle: Our free membership provides you with ...
   description: |

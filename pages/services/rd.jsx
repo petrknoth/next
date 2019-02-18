@@ -72,19 +72,19 @@ const RdPage = () => (
     </Section>
 
     <Section
-      caption={rdData.included.title}
-      key={rdData.included.title}
-      id={rdData.included.title}
+      caption={rdData.package.title}
+      key={rdData.package.title}
+      id={rdData.package.title}
     >
-      <h2>{rdData.included.title}</h2>
-      <p className="h4 ">{rdData.included.subtitle}</p>
-      <Content markdown>{rdData.included.description}</Content>
+      <h2>{rdData.package.title}</h2>
+      <p className="h4 ">{rdData.package.subtitle}</p>
+      <Content markdown>{rdData.package.description}</Content>
       <div className="text-center">
-        <Button color="primary" outline href={rdData.included.button1}>
-          {rdData.included.caption1}
+        <Button color="primary" outline href={rdData.package.button1}>
+          {rdData.package.caption1}
         </Button>
-        <Button color="primary" href={rdData.included.button2} className="ml-2">
-          {rdData.included.caption2}
+        <Button color="primary" href={rdData.package.button2} className="ml-2">
+          {rdData.package.caption2}
         </Button>
       </div>
     </Section>
