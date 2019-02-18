@@ -1,34 +1,60 @@
 title: CORE Repository Dashboard
 
-sections:
--
-  id:
+short:
   title:
-  propositiontitle: Short value proposition about this long
-  propositionscreenshot: /static/images/map.png
-  propositiondescription: |
-      Description of screenshot, which may a [link](https://youtu.be/t_Kd_G7p6ZQ).
+  subtitle: Short value proposition about this long
+  screenshot: /static/images/screenshot.png
+  description: |
+    Description of screenshot, which may a [link](https://youtu.be/t_Kd_G7p6ZQ).
 
--
-  id: whats-included
+included:
   title: What is included
-  includedtitle: Our free membership provides you with ...
-  includeddescription: |
-    * Lorem ipum sjsjsj f f j w dewjelkjwfejf wekjfnbwjfbeorwnforw
-    * Lorem ipum sjsjsj f f j w dewjelkjwfejf wekjfnbwjfbeorwnforw
+  subtitle: Our free membership provides you with ...
+  description: |
+    * Lorem ipum sjsjsj  up for this service you'll get access to our ent
+    sdfijlohuvre dewjelkjwfejf wekjfnbwjfbeorwnforw
 
-    Dduhiuhuhuh ijoijoijoijoij hohoihoihopijih oijoijoijoijoi huhouhu fvjhnknkjnkjnjk
-    regtkkn hjbnikjnkjn iygihjomp pokpjpokpopok ohohoho ughoihoroi rjono oijoi
-    [Link](https://www.google.com/)
-  includedbutton: ~services/api
-  includedcaption: Read more
+    * Lorem ipum sergrebgeerwi grwegerger fefwfkjoh oiygiuyfutf
+    sj ffffff f j w dewjelkjwfejf lhliytuyg iyturtuy uwekjfnbwjfbeorwnforw
 
+    By signing up for this service you'll get access to our entire [free package](/services),
+    giving you access to other services like [Service](/services),  [Service](/services),
+    [Service](/services), and [more](/services)
+  button1: ~services/api
+  caption1: Read more about our free package
+  button2: ~about#contact
+  caption2: Sign up
 
--
-  id: premium-features
+premium:
   title: Premium features
+  subtitle: Our free membership provides you with ...
+  description: |
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries, but also the leap into
+    electronic typesetting, remaining essentially unchanged. It was popularised in
+    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.
+  button1: ~services/api
+  caption1: Read more about our free package
+  button2: ~about#contact
+  caption2: Join CORE
 
-
--
-  id: documentation
+documentation:
   title: Documentation
+  subtitle: Explore documentation
+  description: |
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries, but also the leap into
+    electronic typesetting, remaining essentially unchanged. It was popularised in
+    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.
+  button1: ~services/api
+  caption1: Read more about documentation
+  button2: ~services/api
+  caption2: Read more
