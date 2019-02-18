@@ -1,8 +1,13 @@
 import React from 'react'
-import { Article, Content, Section, Button } from 'components'
+import {
+  Article,
+  Content,
+  Section,
+  Button,
+  KeyFeatureList,
+  KeyFeature,
+} from 'components'
 import rdData from 'data/rd.yml'
-
-import { Row, Col } from 'reactstrap'
 
 import './services.scss'
 import Testimonial from '../../components/testimonial'
@@ -10,7 +15,7 @@ import Testimonial from '../../components/testimonial'
 const RdPage = () => (
   <Article nav>
     <h1>{rdData.title}</h1>
-    <p className="h4 text-center">{rdData.tagline}</p>
+    <p className="h4 text-center pt-5">{rdData.tagline}</p>
 
     <figure>
       <img
@@ -23,40 +28,13 @@ const RdPage = () => (
       </figcaption>
     </figure>
 
-    <Row className="pt-5">
-      <Col xs="12" md="4">
-        <figure className="d-flex align-items-center justify-content-center service-section-logo">
-          <img
-            className="img-fluid"
-            src={rdData.logo1}
-            alt={`${rdData.logo1}'s logo`}
-          />
-        </figure>
-        <span className="h6 text-center d-block">{rdData.caption1}</span>
-      </Col>
-
-      <Col xs="12" md="4">
-        <figure className="d-flex align-items-center justify-content-center service-section-logo">
-          <img
-            className="img-fluid"
-            src={rdData.logo2}
-            alt={`${rdData.logo2}'s logo`}
-          />
-        </figure>
-        <span className="h6 text-center d-block">{rdData.caption2}</span>
-      </Col>
-
-      <Col xs="12" md="4">
-        <figure className="d-flex align-items-center justify-content-center service-section-logo">
-          <img
-            className="img-fluid"
-            src={rdData.logo3}
-            alt={`${rdData.logo3}'s logo`}
-          />
-        </figure>
-        <span className="h6 text-center d-block">{rdData.caption3}</span>
-      </Col>
-    </Row>
+    <KeyFeatureList className="pt-5">
+      {rdData.features.map(({ title, picture }) => (
+        <KeyFeature title={title} icon={picture} key={title}>
+          <Content markdown>{title}</Content>
+        </KeyFeature>
+      ))}
+    </KeyFeatureList>
 
     <Content className="py-5" markdown>
       {rdData.description}
