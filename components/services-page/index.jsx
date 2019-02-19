@@ -7,9 +7,9 @@ import {
   KeyFeatureList,
   KeyFeature,
 } from 'components'
+import Testimonial from '../testimonial'
 
 import './services-page.scss'
-import Testimonial from '../testimonial'
 
 const ServicesPages = ({
   title,
