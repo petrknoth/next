@@ -6,7 +6,7 @@ import {
   Button,
   KeyFeatureList,
   KeyFeature,
-} from 'components'
+} from '..'
 import Testimonial from '../testimonial'
 
 import './services-page.scss'
