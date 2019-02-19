@@ -1,4 +1,4 @@
-@import "~components/bootstrap/core";
+@import "../components/bootstrap/core";
 
 .service-section {
 }
@@ -53,4 +53,10 @@
   .btn {
     margin: map-get($spacers, 1) / 2;
   }
+}
+
+.service-page-tagline {
+  font-size: $h3-font-size;
+  font-weight: $headings-font-weight;
+  text-align: center;
 }

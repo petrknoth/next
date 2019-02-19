@@ -1,27 +1,23 @@
 import React from 'react'
-import {
-  Article,
-  Content,
-  Section,
-  Button,
-  KeyFeatureList,
-  KeyFeature,
-} from '..'
-import Testimonial from '../testimonial'
+import { Article, Content, Section } from '../../content'
+import { Button } from '../../elements'
+import { KeyFeatureList, KeyFeature } from '../../key-feature'
+import Testimonial from '../../testimonial'
 
-import './services-page.scss'
+import './service-page.scss'
 
-const ServicesPages = ({
+const ServicePage = ({
   title,
   tagline,
   screenshot,
   features,
+  description,
   testimonial,
   freePackage,
 }) => (
   <Article nav>
     <h1>{title}</h1>
-    <p className="lead">{tagline}</p>
+    <p className="service-page-tagline">{tagline}</p>
 
     <figure>
       <img
@@ -47,7 +43,7 @@ const ServicesPages = ({
     </KeyFeatureList>
 
     <Content className="py-5" markdown>
-      {features.description}
+      {description}
     </Content>
 
     <Testimonial {...testimonial} />
@@ -71,4 +67,8 @@ const ServicesPages = ({
   </Article>
 )
 
-export default ServicesPages
+ServicePage.create = (pageContext, packageContext) => () => (
+  <ServicePage freePackage={packageContext} {...pageContext} />
+)
+
+export default ServicePage
