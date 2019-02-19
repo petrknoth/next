@@ -17,21 +17,21 @@ features:
   title: Key message 3
   picture: /static/images/logo.png
 
-description: |
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-  when an unknown printer took a galley of type and scrambled it to make a type
-  specimen book. It has survived not only five centuries, but also the leap into
-  electronic typesetting, remaining essentially unchanged. It was popularised in
-  the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-  and more recently with desktop publishing software like Aldus PageMaker
-  including versions of Lorem Ipsum.
+  description: |
+    features description ... Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries, but also the leap into
+    electronic typesetting, remaining essentially unchanged. It was popularised in
+    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.
 
-  [Looking for documentation?](https://youtu.be/t_Kd_G7p6ZQ)
+    [Looking for documentation?](https://youtu.be/t_Kd_G7p6ZQ)
 
 testimonial:
   content: |
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    testimonial content ... Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
     when an unknown printer took a galley of type and scrambled it to make a type
     specimen book.
@@ -40,11 +40,11 @@ testimonial:
     role: Role at Company
     picture: /static/images/logo.png
 
-package:
+free-package:
   title: What is included
   subtitle:
   description: |
-    Our free membership provides you with ...
+    free-package description ... Our free membership provides you with ...
 
     * Lorem ipum sjsjsj  up for this service you'll get access to our ent
       sdfijlohuvre dewjelkjwfejf wekjfnbwjfbeorwnforw
@@ -66,7 +66,7 @@ premium:
   title: Premium features
   subtitle: Our free membership provides you with ...
   description: |
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    premium description ... Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
     when an unknown printer took a galley of type and scrambled it to make a type
     specimen book. It has survived not only five centuries, but also the leap into
@@ -86,7 +86,7 @@ documentation:
   title: Documentation
   subtitle: Explore documentation
   description: |
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    documentation description ... Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
     when an unknown printer took a galley of type and scrambled it to make a type
     specimen book. It has survived not only five centuries, but also the leap into
