@@ -2,6 +2,7 @@ import React from 'react'
 import { Article, Content, Section } from '../../content'
 import { Button } from '../../elements'
 import { KeyFeatureList, KeyFeature } from '../../key-feature'
+import { ServicesFeatureList, ServicesFeature } from '../../services-list'
 import Testimonial from '../../testimonial'
 
 import './service-page.scss'
@@ -11,6 +12,7 @@ const ServicePage = ({
   tagline,
   screenshot,
   features,
+  relatedServices,
   description,
   testimonial,
   freePackage,
@@ -63,6 +65,21 @@ const ServicePage = ({
           {freePackage.actions.secondary.caption}
         </Button>
       </div>
+    </Section>
+
+    <Section caption="You might also be interested in" id="related-services">
+      <h2>You might also be interested in</h2>
+      <ServicesFeatureList className="pt-5">
+        {relatedServices.map(service => (
+          <ServicesFeature
+            title={service.title}
+            icon={service.picture}
+            key={service.title}
+          >
+            <Content markdown>{service.title}</Content>
+          </ServicesFeature>
+        ))}
+      </ServicesFeatureList>
     </Section>
   </Article>
 )

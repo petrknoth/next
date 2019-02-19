@@ -39,3 +39,14 @@ testimonial:
     name: Author
     role: Role at Company
     picture: /static/images/logo.png
+
+related-services:
+-
+  title: Service 1
+  picture: /static/images/logo.png
+-
+  title: Service 2
+  picture: /static/images/logo.png
+-
+  title: Service 3
+  picture: /static/images/logo.png
