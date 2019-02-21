@@ -49,7 +49,7 @@ testimonial:
   author:
     name: Viktor Botev
     role: CTO, Iris AI AS
-    picture: /static/images/logo.png
+    picture: /static/images/iris.png
 
 related-services:
 -
